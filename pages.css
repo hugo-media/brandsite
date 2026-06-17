@@ -118,6 +118,7 @@
 }
 
 .platform-scale,
+.platform-value,
 .platform-unites {
   padding: 48px 0;
   border-bottom: 1px solid var(--line);
@@ -155,7 +156,8 @@
 }
 
 .platform-section-heading p:not(.section-label),
-.platform-unites-list p {
+.platform-unites-list p,
+.platform-value-closing {
   max-width: 860px;
   margin: 0;
   color: rgba(245, 243, 240, 0.74);
@@ -168,13 +170,15 @@
   margin-top: 18px;
 }
 
-.platform-scale-grid {
+.platform-scale-grid,
+.platform-value-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.platform-scale-card {
+.platform-scale-card,
+.platform-value-card {
   min-height: 286px;
   display: flex;
   flex-direction: column;
@@ -187,6 +191,11 @@
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.26);
 }
 
+.platform-value-card {
+  min-height: 230px;
+  justify-content: flex-start;
+}
+
 .platform-scale-card strong {
   display: block;
   color: #fff;
@@ -196,7 +205,8 @@
   letter-spacing: 0;
 }
 
-.platform-scale-card h3 {
+.platform-scale-card h3,
+.platform-value-card h3 {
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
   font-size: clamp(1.1rem, 2.1vw, 1.55rem);
@@ -205,13 +215,46 @@
   letter-spacing: 0;
 }
 
-.platform-scale-card p {
+.platform-value-card h3 {
+  font-size: clamp(1.2rem, 2.3vw, 1.72rem);
+}
+
+.platform-scale-card p,
+.platform-value-card p {
   max-width: 580px;
   margin: 0;
   color: rgba(245, 243, 240, 0.7);
   font-size: clamp(0.94rem, 1.35vw, 1.04rem);
   line-height: 1.58;
   font-weight: 600;
+}
+
+.platform-value-closing {
+  margin-top: 26px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  background: rgba(13, 13, 17, 0.9);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1.08rem, 1.8vw, 1.28rem);
+  font-weight: 800;
+}
+
+.platform-value-cta {
+  width: fit-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 16px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: #f5f3f0;
+  color: #08080c;
+  font-size: 0.95rem;
+  line-height: 1;
+  font-weight: 800;
 }
 
 .platform-unites-list {
@@ -268,8 +311,10 @@
 @media (max-width: 900px) {
   .editorial-nav { gap: 8px; }
   .editorial-card-grid { grid-template-columns: 1fr; }
-  .platform-scale-grid { grid-template-columns: 1fr; }
+  .platform-scale-grid,
+  .platform-value-grid { grid-template-columns: 1fr; }
   .platform-scale-card { min-height: 238px; }
+  .platform-value-card { min-height: 190px; }
   .logo-page::before,
   .visual-page::before {
     background-position: center top 86px;
@@ -307,8 +352,11 @@
   .logo-page .editorial-hero,
   .visual-page .editorial-hero { padding-top: 155px; }
   .platform-scale,
+  .platform-value,
   .platform-unites { padding: 36px 0; }
   .platform-scale-card { min-height: 218px; }
+  .platform-value-card { min-height: 172px; }
   .platform-scale-card strong { font-size: clamp(2.7rem, 15vw, 4.2rem); }
   .platform-unites-list p + p { margin-top: 16px; }
+  .platform-value-cta { width: 100%; }
 }
