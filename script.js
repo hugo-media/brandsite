@@ -1,34 +1,44 @@
-# Hugo Media Group
+const HUGO_LINKS = {
+  contact: "",
+  media: "",
+  legalization: "",
+  business: "",
+  partnerships: "",
+  telegram: "",
+  instagram: "",
+  facebook: "",
+  tiktok: "",
+  youtube: ""
+};
 
-Premium static landing page for Hugo / Hugo Media Group.
+const toast = document.querySelector(".toast");
+let toastTimer;
 
-## Structure
+function showToast(message) {
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+}
 
-- `index.html` — main page content and links
-- `style.css` — design and responsive layout
-- `script.js` — small helper for temporary empty links
-- `assets/hugo-hero.jpg` — main hero photo
+function applyEditableLinks() {
+  document.querySelectorAll("[data-link]").forEach((element) => {
+    const key = element.dataset.link;
+    const url = HUGO_LINKS[key];
 
-## Deploy on Vercel
+    if (url) {
+      element.href = url;
+      element.target = "_blank";
+      element.rel = "noopener noreferrer";
+      return;
+    }
 
-1. Push these files to GitHub.
-2. Import the repository in Vercel.
-3. Framework Preset: Other.
-4. Build Command: leave empty.
-5. Output Directory: leave empty or use `.`.
-6. Deploy.
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+      showToast("Посилання ще не додано. Відредагуйте HUGO_LINKS у script.js.");
+    });
+  });
+}
 
-## Links to replace
-
-In `index.html`, replace all `href="#"` with real URLs for:
-
-- Media platform
-- Legalization in Poland
-- Business advertising
-- Cooperation
-- Telegram
-- Instagram
-- TikTok
-- YouTube
-- Telegram channel
-- Main CTA: Write me
+applyEditableLinks();
