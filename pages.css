@@ -121,7 +121,8 @@ h1 {
   font-weight: 600;
 }
 
-.button-row {
+.button-row,
+.actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -159,7 +160,7 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("hugo-logo.jpg");
+  background-image: url("photo_2026-06-10_23-00-39%20-%20Copy.jpg");
   background-size: min(84%, 560px) auto;
   background-position: center;
   background-repeat: no-repeat;
