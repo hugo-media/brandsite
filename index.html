@@ -8,7 +8,7 @@
   <meta name="keywords" content="Hugo Media Group, Хуго, українці в Польщі, медіа, легалізація в Польщі, реклама бізнесу, Варшава">
   <meta name="author" content="Hugo Media Group">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0b0b0b">
+  <meta name="theme-color" content="#f4f4f2">
   <link rel="canonical" href="https://hugosite-lac.vercel.app/">
   <meta property="og:locale" content="uk_UA">
   <meta property="og:type" content="website">
@@ -30,40 +30,72 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
+  <main class="brand-page" aria-label="Hugo Media Group personal brand page">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media">
-        <img src="hugo-hero.jpg" alt="Хуго - засновник Hugo Media Group" width="1365" height="2048">
+      <div class="hero-photo" aria-hidden="true">
+        <img src="hugo-hero.jpg" alt="" width="1365" height="2048">
       </div>
-      <div class="hero-content">
-        <p class="eyebrow">Hugo Media Group</p>
-        <h1 id="hero-title">Хуго</h1>
-        <p class="hero-subtitle">Персональний бренд. Медіа-платформа. Точка входу для українців у Польщі.</p>
-        <div class="hero-actions" aria-label="Основні дії">
-          <a class="button button-primary" href="#contact" data-link="contact">Написати</a>
-          <a class="button button-secondary" href="#services">Послуги</a>
+
+      <div class="hero-copy">
+        <p class="brand-mark"><span></span>Hugo Media Group</p>
+
+        <div class="name-row">
+          <h1 id="hero-title">Хуго</h1>
+          <span class="verified" aria-label="Підтверджено">✓</span>
         </div>
+
+        <div class="location-pill" aria-label="Локація">
+          <span aria-hidden="true">⌖</span>
+          Warszawa · Poland
+        </div>
+
+        <p class="tags">Українці в Польщі · Медіа · Легалізація · Бізнес</p>
+
+        <p class="lead">Hugo Media Group — персональний бренд і медійна платформа для українців у Польщі. Ми створюємо контент, пояснюємо важливі процеси, просуваємо бізнеси та об’єднуємо людей, ідеї й можливості.</p>
       </div>
     </section>
-    <section class="intro section" aria-labelledby="intro-title">
-      <p class="section-kicker">Концепція</p>
-      <h2 id="intro-title">Hugo - це особистий бренд. Hugo Media Group - це платформа.</h2>
-      <p>Hugo Media Group — персональний бренд і медійна платформа для українців у Польщі. Ми створюємо контент, пояснюємо важливі процеси, просуваємо бізнеси та об’єднуємо людей, ідеї й можливості.</p>
-    </section>
-    <section class="services section" id="services" aria-labelledby="services-title">
-      <p class="section-kicker">Напрямки</p>
-      <h2 id="services-title">Гілки Hugo Media Group</h2>
-      <div class="service-list">
-        <a class="service-card" href="#" data-link="media"><span>01</span><strong>Медіа-платформа</strong><small>Контент, новини, історії та комунікація з українською аудиторією в Польщі.</small></a>
-        <a class="service-card" href="#" data-link="legalization"><span>02</span><strong>Легалізація</strong><small>Практична допомога з документами, статусом і адаптацією в Польщі.</small></a>
-        <a class="service-card" href="#" data-link="business"><span>03</span><strong>Реклама для бізнесу</strong><small>Медійні інтеграції, просування, контент і доступ до релевантної аудиторії.</small></a>
-        <a class="service-card" href="#" data-link="partnerships"><span>04</span><strong>Партнерства</strong><small>Колаборації, спецпроєкти та довгострокова співпраця з брендами.</small></a>
+
+    <section class="directions" id="services" aria-labelledby="directions-title">
+      <h2 id="directions-title">Напрямки платформи</h2>
+
+      <div class="card-list">
+        <a class="direction-card" href="#" data-link="media">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v5h5M9 12h6M9 16h5"/></svg>
+          </span>
+          <span class="card-text"><strong>Медіа-платформа</strong><small>Контент, новини, історії та комунікація з українцями в Польщі</small></span>
+          <span class="card-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="direction-card" href="#" data-link="legalization">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 3h8l3 3v15H7V3Z"/><path d="M15 3v4h4M10 12h5M10 16h3"/></svg>
+          </span>
+          <span class="card-text"><strong>Легалізація</strong><small>Документи, статус, адаптація та практичні процеси в Польщі</small></span>
+          <span class="card-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="direction-card" href="#" data-link="business">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M21 6l-5 5-4-4-7 7"/></svg>
+          </span>
+          <span class="card-text"><strong>Реклама для бізнесу</strong><small>Просування, інтеграції та доступ до релевантної аудиторії</small></span>
+          <span class="card-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="direction-card" href="#" data-link="partnerships">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 12l2-2a3 3 0 0 1 4 0l2 2M8.5 13.5 6 11l-3 3 4 4a3 3 0 0 0 4 0l1-1M15.5 13.5 18 11l3 3-4 4a3 3 0 0 1-4 0l-1-1"/></svg>
+          </span>
+          <span class="card-text"><strong>Партнерства</strong><small>Колаборації, спецпроєкти та довгострокова співпраця</small></span>
+          <span class="card-arrow" aria-hidden="true">›</span>
+        </a>
       </div>
     </section>
-    <section class="social section" id="contact" aria-labelledby="social-title">
-      <p class="section-kicker">Контакти</p>
-      <h2 id="social-title">Соціальні мережі</h2>
-      <div class="social-links">
+
+    <section class="social" id="contact" aria-labelledby="social-title">
+      <h2 id="social-title">Де мене знайти</h2>
+      <div class="social-grid">
         <a href="#" data-link="telegram">Telegram</a>
         <a href="#" data-link="instagram">Instagram</a>
         <a href="#" data-link="facebook">Facebook</a>
@@ -72,7 +104,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer"><span>Hugo Media Group</span><span>Warszawa, Poland</span></footer>
+
   <div class="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
 </body>
