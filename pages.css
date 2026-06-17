@@ -32,26 +32,45 @@
   gap: 12px;
 }
 
-.logo-page {
+.logo-page,
+.visual-page {
   position: relative;
   isolation: isolate;
 }
 
-.logo-page::before {
+.logo-page::before,
+.visual-page::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -2;
-  background-image: var(--brand-logo-bg);
+  background-image: var(--brand-logo-bg, var(--page-visual-bg));
   background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.logo-page::before {
   background-position: right 3vw center;
   background-size: min(82vw, 1180px) auto;
   opacity: 0.2;
   filter: grayscale(1) contrast(1.22) blur(0.1px);
-  pointer-events: none;
 }
 
-.logo-page::after {
+.visual-page::before {
+  background-position: right 5vw center;
+  background-size: min(58vw, 860px) auto;
+  opacity: 0.42;
+  filter: grayscale(1) contrast(1.08);
+}
+
+.portrait-page::before {
+  background-position: right 6vw top 80px;
+  background-size: min(54vw, 760px) auto;
+  opacity: 0.5;
+}
+
+.logo-page::after,
+.visual-page::after {
   content: "";
   position: fixed;
   inset: 0;
@@ -63,17 +82,27 @@
   pointer-events: none;
 }
 
-.logo-page .editorial-hero {
+.visual-page::after {
+  background:
+    radial-gradient(circle at 70% 34%, rgba(93, 108, 255, 0.28), transparent 30rem),
+    radial-gradient(circle at 56% 86%, rgba(116, 71, 255, 0.22), transparent 38rem),
+    linear-gradient(90deg, rgba(7, 7, 12, 0.99) 0%, rgba(7, 7, 12, 0.94) 48%, rgba(7, 7, 12, 0.76) 100%);
+}
+
+.logo-page .editorial-hero,
+.visual-page .editorial-hero {
   min-height: min(760px, calc(100svh - 96px));
   grid-template-columns: minmax(0, 760px);
   align-items: center;
 }
 
-.logo-page .editorial-copy {
+.logo-page .editorial-copy,
+.visual-page .editorial-copy {
   max-width: 760px;
 }
 
-.logo-page .editorial-logo {
+.logo-page .editorial-logo,
+.visual-page .editorial-photo {
   display: none;
 }
 
@@ -133,18 +162,30 @@
 @media (max-width: 900px) {
   .editorial-nav { gap: 8px; }
   .editorial-card-grid { grid-template-columns: 1fr; }
-  .logo-page::before {
+  .logo-page::before,
+  .visual-page::before {
     background-position: center top 86px;
     background-size: min(128vw, 700px) auto;
     opacity: 0.16;
   }
-  .logo-page::after {
+  .visual-page::before {
+    background-size: min(112vw, 620px) auto;
+    opacity: 0.28;
+  }
+  .portrait-page::before {
+    background-position: center top 72px;
+    background-size: min(104vw, 560px) auto;
+    opacity: 0.34;
+  }
+  .logo-page::after,
+  .visual-page::after {
     background:
       radial-gradient(circle at 50% 22%, rgba(93, 108, 255, 0.28), transparent 22rem),
       radial-gradient(circle at 50% 92%, rgba(116, 71, 255, 0.24), transparent 28rem),
       linear-gradient(180deg, rgba(7, 7, 12, 0.7) 0%, rgba(7, 7, 12, 0.96) 48%, rgba(7, 7, 12, 1) 100%);
   }
-  .logo-page .editorial-hero {
+  .logo-page .editorial-hero,
+  .visual-page .editorial-hero {
     min-height: auto;
     grid-template-columns: 1fr;
     padding-top: 170px;
@@ -154,5 +195,6 @@
 @media (max-width: 520px) {
   .editorial-topbar { align-items: flex-start; padding: 18px 0; }
   .editorial-nav { flex-direction: column; align-items: flex-end; }
-  .logo-page .editorial-hero { padding-top: 155px; }
+  .logo-page .editorial-hero,
+  .visual-page .editorial-hero { padding-top: 155px; }
 }
