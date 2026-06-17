@@ -49,18 +49,12 @@
   pointer-events: none;
 }
 
-.logo-page::before {
+.logo-page::before,
+.visual-page::before {
   background-position: right 3vw center;
   background-size: min(82vw, 1180px) auto;
   opacity: 0.2;
   filter: grayscale(1) contrast(1.22) blur(0.1px);
-}
-
-.visual-page::before {
-  background-position: right 5vw center;
-  background-size: min(58vw, 860px) auto;
-  opacity: 0.42;
-  filter: grayscale(1) contrast(1.08);
 }
 
 .portrait-page::before {
@@ -175,10 +169,6 @@
     background-position: center top 86px;
     background-size: min(128vw, 700px) auto;
     opacity: 0.16;
-  }
-  .visual-page::before {
-    background-size: min(112vw, 620px) auto;
-    opacity: 0.28;
   }
   .portrait-page::before {
     background-position: center top 72px;
