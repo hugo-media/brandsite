@@ -91,6 +91,18 @@
     linear-gradient(90deg, rgba(7, 7, 12, 0.99) 0%, rgba(7, 7, 12, 0.9) 43%, rgba(7, 7, 12, 0.38) 100%);
 }
 
+body[data-page="business"].visual-page::before {
+  opacity: 0.34;
+  filter: grayscale(1) contrast(1.12) brightness(1.24);
+}
+
+body[data-page="business"].visual-page::after {
+  background:
+    radial-gradient(circle at 70% 34%, rgba(93, 108, 255, 0.2), transparent 30rem),
+    radial-gradient(circle at 56% 86%, rgba(116, 71, 255, 0.16), transparent 38rem),
+    linear-gradient(90deg, rgba(7, 7, 12, 0.98) 0%, rgba(7, 7, 12, 0.88) 48%, rgba(7, 7, 12, 0.56) 100%);
+}
+
 .logo-page .editorial-hero,
 .visual-page .editorial-hero {
   min-height: min(760px, calc(100svh - 96px));
