@@ -40,14 +40,14 @@
 .logo-page::before {
   content: "";
   position: fixed;
-  inset: -12vh -10vw;
+  inset: 0;
   z-index: -2;
   background-image: var(--brand-logo-bg);
   background-repeat: no-repeat;
-  background-position: right 4vw top 14vh;
-  background-size: min(70vw, 980px) auto;
-  opacity: 0.16;
-  filter: grayscale(1) contrast(1.18) blur(0.2px);
+  background-position: right 3vw center;
+  background-size: min(82vw, 1180px) auto;
+  opacity: 0.2;
+  filter: grayscale(1) contrast(1.22) blur(0.1px);
   pointer-events: none;
 }
 
@@ -57,36 +57,24 @@
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 68% 32%, rgba(93, 108, 255, 0.28), transparent 28rem),
-    radial-gradient(circle at 58% 82%, rgba(116, 71, 255, 0.24), transparent 34rem),
-    linear-gradient(90deg, rgba(7, 7, 12, 0.98) 0%, rgba(7, 7, 12, 0.88) 42%, rgba(7, 7, 12, 0.62) 100%);
+    radial-gradient(circle at 72% 34%, rgba(93, 108, 255, 0.32), transparent 30rem),
+    radial-gradient(circle at 54% 88%, rgba(116, 71, 255, 0.26), transparent 38rem),
+    linear-gradient(90deg, rgba(7, 7, 12, 0.99) 0%, rgba(7, 7, 12, 0.92) 43%, rgba(7, 7, 12, 0.68) 100%);
   pointer-events: none;
 }
 
 .logo-page .editorial-hero {
   min-height: min(760px, calc(100svh - 96px));
-  grid-template-columns: minmax(0, 0.72fr) minmax(260px, 0.54fr);
+  grid-template-columns: minmax(0, 760px);
   align-items: center;
 }
 
-.logo-page .editorial-logo {
-  min-height: 0;
-  align-self: stretch;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  overflow: visible;
+.logo-page .editorial-copy {
+  max-width: 760px;
 }
 
-.logo-page .editorial-logo img {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  width: min(52vw, 700px);
-  max-width: none;
-  height: auto;
-  transform: translate(-38%, -50%);
-  opacity: 0.92;
-  filter: grayscale(1) contrast(1.18) drop-shadow(0 30px 90px rgba(0, 0, 0, 0.55));
+.logo-page .editorial-logo {
+  display: none;
 }
 
 .editorial-subtitle {
@@ -146,28 +134,25 @@
   .editorial-nav { gap: 8px; }
   .editorial-card-grid { grid-template-columns: 1fr; }
   .logo-page::before {
-    background-position: center top 92px;
-    background-size: min(118vw, 620px) auto;
-    opacity: 0.14;
+    background-position: center top 86px;
+    background-size: min(128vw, 700px) auto;
+    opacity: 0.16;
   }
   .logo-page::after {
     background:
-      radial-gradient(circle at 50% 22%, rgba(93, 108, 255, 0.25), transparent 22rem),
-      radial-gradient(circle at 50% 92%, rgba(116, 71, 255, 0.22), transparent 28rem),
-      linear-gradient(180deg, rgba(7, 7, 12, 0.68) 0%, rgba(7, 7, 12, 0.96) 48%, rgba(7, 7, 12, 1) 100%);
+      radial-gradient(circle at 50% 22%, rgba(93, 108, 255, 0.28), transparent 22rem),
+      radial-gradient(circle at 50% 92%, rgba(116, 71, 255, 0.24), transparent 28rem),
+      linear-gradient(180deg, rgba(7, 7, 12, 0.7) 0%, rgba(7, 7, 12, 0.96) 48%, rgba(7, 7, 12, 1) 100%);
   }
   .logo-page .editorial-hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding-top: 160px;
-  }
-  .logo-page .editorial-logo {
-    display: none;
+    padding-top: 170px;
   }
 }
 
 @media (max-width: 520px) {
   .editorial-topbar { align-items: flex-start; padding: 18px 0; }
   .editorial-nav { flex-direction: column; align-items: flex-end; }
-  .logo-page .editorial-hero { padding-top: 150px; }
+  .logo-page .editorial-hero { padding-top: 155px; }
 }
