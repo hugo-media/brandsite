@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
-  --bg: #f2f1ee;
-  --paper: #fbfaf8;
-  --ink: #101010;
-  --text: #2d2d2b;
-  --muted: #77736c;
-  --line: #dedbd4;
-  --line-strong: #c8c4ba;
+  --bg: #f4f3f0;
+  --paper: #fdfcf9;
+  --ink: #0b0b0a;
+  --text: #292826;
+  --muted: #77736b;
+  --line: #e0ddd5;
+  --line-strong: #c9c4ba;
   --white: #ffffff;
   --radius: 8px;
-  --max: 1120px;
+  --max: 1180px;
 }
 
 * {
@@ -45,12 +45,12 @@ a {
 }
 
 .topbar {
-  min-height: 66px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 0 clamp(20px, 4.6vw, 48px);
+  padding: 0 56px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -59,9 +59,9 @@ a {
 .eyebrow,
 .section-heading p {
   color: var(--ink);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -74,7 +74,7 @@ a {
 
 .brand-wordmark span {
   width: 2px;
-  height: 20px;
+  height: 22px;
   background: var(--ink);
 }
 
@@ -84,29 +84,29 @@ a {
 }
 
 .hero {
-  min-height: 650px;
+  min-height: 660px;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
+  grid-template-columns: minmax(0, 0.84fr) minmax(420px, 1fr);
   align-items: stretch;
   border-bottom: 1px solid var(--line);
 }
 
 .hero-copy {
-  padding: clamp(48px, 6vw, 78px) clamp(28px, 5vw, 58px);
+  padding: 76px 60px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .eyebrow {
-  margin: 0 0 26px;
+  margin: 0 0 28px;
   color: var(--muted);
 }
 
 .hero-title-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
 }
 
 h1,
@@ -119,16 +119,17 @@ figure {
 h1 {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(5rem, 8.4vw, 7.2rem);
-  line-height: 0.86;
-  font-weight: 800;
-  letter-spacing: -0.06em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 7.2rem;
+  line-height: 0.78;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .verified {
   width: 30px;
   height: 30px;
-  margin-top: 0.45em;
+  margin-top: 0.28em;
   display: inline-grid;
   place-items: center;
   border-radius: 50%;
@@ -140,22 +141,22 @@ h1 {
 
 .location {
   width: fit-content;
-  margin: 24px 0 28px;
+  margin: 26px 0 28px;
   padding: 8px 14px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
   color: var(--text);
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.55);
   font-size: 0.9rem;
   font-weight: 650;
 }
 
 .lead {
-  max-width: 548px;
+  max-width: 520px;
   margin: 0;
-  color: #343331;
-  font-size: clamp(1.02rem, 1.45vw, 1.16rem);
-  line-height: 1.58;
+  color: #33312e;
+  font-size: 1.06rem;
+  line-height: 1.68;
   font-weight: 500;
 }
 
@@ -192,10 +193,10 @@ h1 {
 
 .portrait {
   position: relative;
-  min-height: 650px;
+  min-height: 660px;
   margin: 0;
   overflow: hidden;
-  background: #e8e7e3;
+  background: #e6e3dc;
 }
 
 .portrait::before {
@@ -203,7 +204,8 @@ h1 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, var(--paper) 0%, rgba(251, 250, 248, 0.54) 16%, rgba(251, 250, 248, 0.05) 43%, rgba(251, 250, 248, 0) 100%), linear-gradient(180deg, rgba(251, 250, 248, 0) 63%, rgba(251, 250, 248, 0.72) 100%);
+  background: linear-gradient(90deg, var(--paper) 0%, rgba(253, 252, 249, 0.5) 12%, rgba(253, 252, 249, 0.04) 36%, rgba(253, 252, 249, 0) 100%), linear-gradient(180deg, rgba(253, 252, 249, 0) 72%, rgba(253, 252, 249, 0.32) 100%);
+  pointer-events: none;
 }
 
 .portrait img {
@@ -211,36 +213,38 @@ h1 {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: 54% 12%;
-  filter: grayscale(8%) saturate(0.88) contrast(1.02) brightness(1.02);
+  object-position: 54% 10%;
+  filter: grayscale(6%) saturate(0.92) contrast(1.06) brightness(1.01);
 }
 
 .services,
 .contact {
-  padding: clamp(48px, 6vw, 72px) clamp(28px, 5vw, 58px);
+  padding: 76px 60px;
   border-bottom: 1px solid var(--line);
 }
 
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(170px, 0.34fr) minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 32px;
   align-items: end;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 .section-heading p {
-  margin: 0 0 6px;
+  margin: 0 0 10px;
   color: var(--muted);
 }
 
 h2 {
   margin: 0;
+  max-width: 760px;
   color: var(--ink);
-  font-size: clamp(2.35rem, 4.15vw, 4.2rem);
-  line-height: 0.96;
-  font-weight: 800;
-  letter-spacing: -0.055em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 4.9rem;
+  line-height: 0.9;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .service-grid {
@@ -249,33 +253,33 @@ h2 {
 }
 
 .service-card {
-  min-height: 94px;
+  min-height: 108px;
   display: grid;
-  grid-template-columns: 44px 44px minmax(0, 1fr) auto;
+  grid-template-columns: 48px 48px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 20px;
-  padding: 18px 0;
+  gap: 22px;
+  padding: 20px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .number {
   align-self: start;
-  padding-top: 5px;
+  padding-top: 8px;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
 }
 
 .service-icon {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   display: grid;
   place-items: center;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.38);
 }
 
 .service-icon svg {
@@ -291,28 +295,28 @@ h2 {
 .service-copy {
   min-width: 0;
   display: grid;
-  gap: 4px;
+  gap: 5px;
 }
 
 .service-copy strong {
   color: var(--ink);
-  font-size: clamp(1.28rem, 2vw, 1.66rem);
+  font-size: 1.62rem;
   line-height: 1.08;
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 .service-copy small {
   max-width: 560px;
   color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.42;
+  font-size: 0.96rem;
+  line-height: 1.48;
   font-weight: 500;
 }
 
 .arrow {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   display: inline-grid;
   place-items: center;
   border: 1px solid var(--line-strong);
@@ -324,7 +328,7 @@ h2 {
 
 .contact {
   border-bottom: 0;
-  padding-bottom: 72px;
+  padding-bottom: 86px;
 }
 
 .social-grid {
@@ -335,12 +339,12 @@ h2 {
 }
 
 .social-grid a {
-  min-height: 62px;
+  min-height: 64px;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 0 14px;
+  padding: 0 16px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   color: var(--ink);
@@ -373,6 +377,38 @@ h2 {
   transform: translateY(0);
 }
 
+@media (max-width: 1040px) {
+  .topbar {
+    padding: 0 36px;
+  }
+
+  .hero {
+    min-height: 620px;
+    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.9fr);
+  }
+
+  .hero-copy {
+    padding: 62px 38px;
+  }
+
+  h1 {
+    font-size: 6.2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  .services,
+  .contact {
+    padding: 64px 38px;
+  }
+
+  .section-heading {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 820px) {
   .site-shell {
     min-height: 100svh;
@@ -382,7 +418,7 @@ h2 {
 
   .topbar {
     min-height: 64px;
-    padding: 0 18px;
+    padding: 0 20px;
   }
 
   .top-link {
@@ -390,36 +426,34 @@ h2 {
   }
 
   .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
+    min-height: 0;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .hero-copy {
-    min-height: 620px;
-    position: relative;
-    z-index: 2;
-    padding: 48px 20px 42px;
-    justify-content: flex-end;
+    padding: 34px 20px 48px;
   }
 
   .portrait {
-    position: absolute;
-    inset: 64px 0 auto auto;
-    width: 58%;
-    height: 620px;
     min-height: 0;
+    height: 430px;
   }
 
   .portrait::before {
-    background: linear-gradient(90deg, var(--paper) 0%, rgba(251, 250, 248, 0.76) 24%, rgba(251, 250, 248, 0.02) 66%), linear-gradient(180deg, rgba(251, 250, 248, 0) 50%, var(--paper) 100%);
+    background: linear-gradient(180deg, rgba(253, 252, 249, 0) 64%, var(--paper) 100%);
   }
 
   .portrait img {
-    object-position: 55% 0;
+    object-position: 53% 5%;
+  }
+
+  .eyebrow {
+    margin-bottom: 20px;
   }
 
   h1 {
-    font-size: clamp(4.75rem, 22vw, 7rem);
+    font-size: 5.8rem;
   }
 
   .verified {
@@ -427,9 +461,14 @@ h2 {
     height: 28px;
   }
 
+  .location {
+    margin: 22px 0 22px;
+  }
+
   .lead {
-    max-width: 430px;
-    font-size: 1.03rem;
+    max-width: 620px;
+    font-size: 1.02rem;
+    line-height: 1.62;
   }
 
   .hero-actions {
@@ -438,27 +477,36 @@ h2 {
 
   .services,
   .contact {
-    padding: 48px 20px;
+    padding: 52px 20px;
   }
 
   .section-heading {
     grid-template-columns: 1fr;
     gap: 10px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
+  }
+
+  .section-heading p {
+    margin-bottom: 0;
   }
 
   h2 {
-    font-size: clamp(2.3rem, 11vw, 3.45rem);
+    font-size: 3.25rem;
+    line-height: 0.94;
   }
 
   .service-card {
-    grid-template-columns: 36px minmax(0, 1fr) auto;
-    gap: 13px;
-    min-height: 92px;
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    gap: 14px;
+    min-height: 96px;
   }
 
   .service-icon {
     display: none;
+  }
+
+  .service-copy strong {
+    font-size: 1.32rem;
   }
 
   .social-grid {
@@ -466,36 +514,39 @@ h2 {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 460px) {
   .brand-wordmark {
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
+    font-size: 0.66rem;
   }
 
   .hero-copy {
-    min-height: 600px;
+    padding: 30px 18px 44px;
   }
 
   .portrait {
-    width: 62%;
-    height: 600px;
+    height: 390px;
   }
 
   h1 {
-    font-size: clamp(4.25rem, 21vw, 5.55rem);
+    font-size: 4.75rem;
   }
 
-  .location {
-    margin: 20px 0 22px;
-    font-size: 0.86rem;
+  .verified {
+    width: 26px;
+    height: 26px;
   }
 
   .button {
     width: 100%;
   }
 
+  h2 {
+    font-size: 2.78rem;
+  }
+
   .service-card {
-    grid-template-columns: 34px minmax(0, 1fr);
+    grid-template-columns: 30px minmax(0, 1fr);
+    padding: 18px 0;
   }
 
   .arrow {
@@ -503,9 +554,9 @@ h2 {
   }
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1181px) {
   body {
-    padding: 28px 0;
+    padding: 22px 0;
   }
 }
 
