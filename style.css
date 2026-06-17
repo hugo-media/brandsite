@@ -434,12 +434,12 @@ h2 {
   }
 
   .hero-copy {
-    padding: 34px 20px 48px;
+    padding: 30px 20px 42px;
   }
 
   .portrait {
     min-height: 0;
-    height: 430px;
+    height: 360px;
   }
 
   .portrait::before {
@@ -451,11 +451,11 @@ h2 {
   }
 
   .eyebrow {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   h1 {
-    font-size: 5.8rem;
+    font-size: 5.35rem;
   }
 
   .verified {
@@ -464,17 +464,17 @@ h2 {
   }
 
   .location {
-    margin: 22px 0 22px;
+    margin: 18px 0 20px;
   }
 
   .lead {
     max-width: 620px;
     font-size: 1.02rem;
-    line-height: 1.62;
+    line-height: 1.6;
   }
 
   .hero-actions {
-    margin-top: 26px;
+    margin-top: 24px;
   }
 
   .services,
@@ -522,15 +522,15 @@ h2 {
   }
 
   .hero-copy {
-    padding: 30px 18px 44px;
+    padding: 26px 18px 38px;
   }
 
   .portrait {
-    height: 390px;
+    height: 340px;
   }
 
   h1 {
-    font-size: 4.75rem;
+    font-size: 4.55rem;
   }
 
   .verified {
@@ -538,8 +538,19 @@ h2 {
     height: 26px;
   }
 
+  .lead {
+    font-size: 0.98rem;
+    line-height: 1.56;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
   .button {
-    width: 100%;
+    min-width: 124px;
+    width: auto;
+    padding: 0 16px;
   }
 
   h2 {
