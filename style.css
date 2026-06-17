@@ -1,0 +1,20 @@
+const toast = document.querySelector('.toast');
+let toastTimer;
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+}
+
+document.querySelectorAll('.needs-link').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const href = link.getAttribute('href');
+    if (!href || href === '#') {
+      event.preventDefault();
+      const label = link.dataset.label || 'цей напрямок';
+      showToast(`Посилання для «${label}» ще не додано. Надішліть URL — і я підставлю його у файл.`);
+    }
+  });
+});
