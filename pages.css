@@ -64,9 +64,10 @@
 }
 
 .portrait-page::before {
-  background-position: right 6vw top 80px;
-  background-size: min(54vw, 760px) auto;
-  opacity: 0.5;
+  background-position: right 5vw top 60px;
+  background-size: min(58vw, 820px) auto;
+  opacity: 0.78;
+  filter: grayscale(1) contrast(1.12) brightness(1.08);
 }
 
 .logo-page::after,
@@ -87,6 +88,13 @@
     radial-gradient(circle at 70% 34%, rgba(93, 108, 255, 0.28), transparent 30rem),
     radial-gradient(circle at 56% 86%, rgba(116, 71, 255, 0.22), transparent 38rem),
     linear-gradient(90deg, rgba(7, 7, 12, 0.99) 0%, rgba(7, 7, 12, 0.94) 48%, rgba(7, 7, 12, 0.76) 100%);
+}
+
+.portrait-page::after {
+  background:
+    radial-gradient(circle at 72% 30%, rgba(93, 108, 255, 0.13), transparent 28rem),
+    radial-gradient(circle at 56% 90%, rgba(116, 71, 255, 0.16), transparent 34rem),
+    linear-gradient(90deg, rgba(7, 7, 12, 0.99) 0%, rgba(7, 7, 12, 0.9) 43%, rgba(7, 7, 12, 0.38) 100%);
 }
 
 .logo-page .editorial-hero,
@@ -174,8 +182,8 @@
   }
   .portrait-page::before {
     background-position: center top 72px;
-    background-size: min(104vw, 560px) auto;
-    opacity: 0.34;
+    background-size: min(112vw, 620px) auto;
+    opacity: 0.58;
   }
   .logo-page::after,
   .visual-page::after {
@@ -183,6 +191,11 @@
       radial-gradient(circle at 50% 22%, rgba(93, 108, 255, 0.28), transparent 22rem),
       radial-gradient(circle at 50% 92%, rgba(116, 71, 255, 0.24), transparent 28rem),
       linear-gradient(180deg, rgba(7, 7, 12, 0.7) 0%, rgba(7, 7, 12, 0.96) 48%, rgba(7, 7, 12, 1) 100%);
+  }
+  .portrait-page::after {
+    background:
+      radial-gradient(circle at 50% 20%, rgba(93, 108, 255, 0.16), transparent 22rem),
+      linear-gradient(180deg, rgba(7, 7, 12, 0.42) 0%, rgba(7, 7, 12, 0.88) 42%, rgba(7, 7, 12, 1) 100%);
   }
   .logo-page .editorial-hero,
   .visual-page .editorial-hero {
