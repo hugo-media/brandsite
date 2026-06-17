@@ -156,12 +156,16 @@
 
 .platform-section-heading p:not(.section-label),
 .platform-unites-list p {
-  max-width: 760px;
+  max-width: 860px;
   margin: 0;
   color: rgba(245, 243, 240, 0.74);
   font-size: clamp(1rem, 1.6vw, 1.12rem);
   line-height: 1.68;
   font-weight: 650;
+}
+
+.platform-unites-list p + p {
+  margin-top: 18px;
 }
 
 .platform-scale-grid {
@@ -211,7 +215,7 @@
 }
 
 .platform-unites-list {
-  padding: clamp(20px, 3vw, 30px);
+  padding: clamp(22px, 3.4vw, 38px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
   background: rgba(13, 13, 17, 0.88);
@@ -306,4 +310,5 @@
   .platform-unites { padding: 36px 0; }
   .platform-scale-card { min-height: 218px; }
   .platform-scale-card strong { font-size: clamp(2.7rem, 15vw, 4.2rem); }
+  .platform-unites-list p + p { margin-top: 16px; }
 }
