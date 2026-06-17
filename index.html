@@ -8,8 +8,11 @@
   <meta name="keywords" content="Hugo Media Group, Хуго, українці в Польщі, медіа, легалізація в Польщі, реклама бізнесу, Варшава">
   <meta name="author" content="Hugo Media Group">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#f4f4f2">
+  <meta name="theme-color" content="#f6f5f2">
   <link rel="canonical" href="https://hugosite-lac.vercel.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <meta property="og:locale" content="uk_UA">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hugo Media Group">
@@ -30,77 +33,83 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="brand-page" aria-label="Hugo Media Group personal brand page">
+  <main class="site-shell" aria-label="Hugo Media Group personal brand page">
+    <header class="topbar">
+      <a class="brand-wordmark" href="/" aria-label="Hugo Media Group">
+        <span></span>
+        Hugo Media Group
+      </a>
+      <a class="top-link" href="#contact">Contact</a>
+    </header>
+
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-photo" aria-hidden="true">
-        <img src="hugo-hero.jpg" alt="" width="1365" height="2048">
-      </div>
-
       <div class="hero-copy">
-        <p class="brand-mark"><span></span>Hugo Media Group</p>
-
-        <div class="name-row">
+        <p class="eyebrow">Personal brand · Media platform</p>
+        <div class="hero-title-row">
           <h1 id="hero-title">Хуго</h1>
           <span class="verified" aria-label="Підтверджено">✓</span>
         </div>
-
-        <div class="location-pill" aria-label="Локація">
-          <span aria-hidden="true">⌖</span>
-          Warszawa · Poland
-        </div>
-
-        <p class="tags">Українці в Польщі · Медіа · Легалізація · Бізнес</p>
-
+        <p class="location">Warszawa · Poland</p>
         <p class="lead">Hugo Media Group — персональний бренд і медійна платформа для українців у Польщі. Ми створюємо контент, пояснюємо важливі процеси, просуваємо бізнеси та об’єднуємо людей, ідеї й можливості.</p>
+        <div class="hero-actions" aria-label="Основні дії">
+          <a class="button button-dark" href="#contact" data-link="contact">Написати <span>↗</span></a>
+          <a class="button button-light" href="#services">Напрямки <span>↓</span></a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <img src="hugo-hero.jpg" alt="Хуго - засновник Hugo Media Group" width="1365" height="2048">
+      </figure>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="section-heading">
+        <p>Platform branches</p>
+        <h2 id="services-title">Напрямки платформи</h2>
+      </div>
+
+      <div class="service-grid">
+        <a class="service-card" href="#" data-link="media">
+          <span class="number">01</span>
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h9l5 5v11H5V4Z"/><path d="M14 4v5h5M8 13h8M8 17h6"/></svg></span>
+          <span class="service-copy"><strong>Медіа-платформа</strong><small>Контент, новини, історії та комунікація з українцями в Польщі.</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="service-card" href="#" data-link="legalization">
+          <span class="number">02</span>
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6V3Z"/><path d="M15 3v4h4M9 12h6M9 16h4"/></svg></span>
+          <span class="service-copy"><strong>Легалізація</strong><small>Документи, статус, адаптація та практичні процеси в Польщі.</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="service-card" href="#" data-link="business">
+          <span class="number">03</span>
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M21 6l-5 5-4-4-7 7"/></svg></span>
+          <span class="service-copy"><strong>Реклама для бізнесу</strong><small>Просування, інтеграції та доступ до релевантної аудиторії.</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="service-card" href="#" data-link="partnerships">
+          <span class="number">04</span>
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12l2-2a3 3 0 0 1 4 0l2 2"/><path d="M8.5 13.5 6 11l-3 3 4 4a3 3 0 0 0 4 0l1-1"/><path d="M15.5 13.5 18 11l3 3-4 4a3 3 0 0 1-4 0l-1-1"/></svg></span>
+          <span class="service-copy"><strong>Партнерства</strong><small>Колаборації, спецпроєкти та довгострокова співпраця.</small></span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
     </section>
 
-    <section class="directions" id="services" aria-labelledby="directions-title">
-      <h2 id="directions-title">Напрямки платформи</h2>
-
-      <div class="card-list">
-        <a class="direction-card" href="#" data-link="media">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v5h5M9 12h6M9 16h5"/></svg>
-          </span>
-          <span class="card-text"><strong>Медіа-платформа</strong><small>Контент, новини, історії та комунікація з українцями в Польщі</small></span>
-          <span class="card-arrow" aria-hidden="true">›</span>
-        </a>
-
-        <a class="direction-card" href="#" data-link="legalization">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M7 3h8l3 3v15H7V3Z"/><path d="M15 3v4h4M10 12h5M10 16h3"/></svg>
-          </span>
-          <span class="card-text"><strong>Легалізація</strong><small>Документи, статус, адаптація та практичні процеси в Польщі</small></span>
-          <span class="card-arrow" aria-hidden="true">›</span>
-        </a>
-
-        <a class="direction-card" href="#" data-link="business">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M21 6l-5 5-4-4-7 7"/></svg>
-          </span>
-          <span class="card-text"><strong>Реклама для бізнесу</strong><small>Просування, інтеграції та доступ до релевантної аудиторії</small></span>
-          <span class="card-arrow" aria-hidden="true">›</span>
-        </a>
-
-        <a class="direction-card" href="#" data-link="partnerships">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M8 12l2-2a3 3 0 0 1 4 0l2 2M8.5 13.5 6 11l-3 3 4 4a3 3 0 0 0 4 0l1-1M15.5 13.5 18 11l3 3-4 4a3 3 0 0 1-4 0l-1-1"/></svg>
-          </span>
-          <span class="card-text"><strong>Партнерства</strong><small>Колаборації, спецпроєкти та довгострокова співпраця</small></span>
-          <span class="card-arrow" aria-hidden="true">›</span>
-        </a>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p>Social presence</p>
+        <h2 id="contact-title">Де мене знайти</h2>
       </div>
-    </section>
-
-    <section class="social" id="contact" aria-labelledby="social-title">
-      <h2 id="social-title">Де мене знайти</h2>
       <div class="social-grid">
-        <a href="#" data-link="telegram">Telegram</a>
-        <a href="#" data-link="instagram">Instagram</a>
-        <a href="#" data-link="facebook">Facebook</a>
-        <a href="#" data-link="tiktok">TikTok</a>
-        <a href="#" data-link="youtube">YouTube</a>
+        <a href="#" data-link="telegram">Telegram <span>↗</span></a>
+        <a href="#" data-link="instagram">Instagram <span>↗</span></a>
+        <a href="#" data-link="facebook">Facebook <span>↗</span></a>
+        <a href="#" data-link="tiktok">TikTok <span>↗</span></a>
+        <a href="#" data-link="youtube">YouTube <span>↗</span></a>
       </div>
     </section>
   </main>
