@@ -82,6 +82,10 @@
   margin-bottom: 24px;
 }
 
+.experience-heading .kicker {
+  color: rgba(245, 243, 240, 0.58);
+}
+
 .experience-heading h2 {
   max-width: 760px;
   margin: 0;
