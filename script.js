@@ -323,7 +323,7 @@ const I18N = {
     "business.lead": "Promocja biznesu przez content, Instagram, TikTok, Telegram i integracje medialne.",
     "business.p1": "Hugo Media Group pomaga firmom komunikować się z odpowiednią ukraińską publicznością w Polsce.",
     "partners.title": "Współpraca",
-    "partners.lead": "Reklма, інтеграції, інтерв’ю, колаборації та спільні проєкти.",
+    "partners.lead": "Reklama, integracje, wywiady, kolaboracje i wspólne projekty.",
     "partners.p1": "Hugo Media Group jest otwarte na współpracę z biznesami, ekspertami, organizacjami i inicjatywami medialnymi."
   }
 };
@@ -385,6 +385,75 @@ function applyEditableLinks() {
   });
 }
 
+function setCtaLink(element, text) {
+  if (!element) return;
+  element.href = HUGO_LINKS.consultation;
+  element.target = "_blank";
+  element.rel = "noopener noreferrer";
+  element.dataset.link = "consultation";
+  const label = element.querySelector("strong") || element;
+  label.removeAttribute("data-i18n");
+  label.textContent = text;
+}
+
+function applyPageCtas() {
+  const page = document.body.dataset.page || "home";
+
+  if (page === "home") {
+    setCtaLink(
+      document.querySelector(".action-list .action-card.action-primary"),
+      "Домовитись про консультацію"
+    );
+    const aboutLink = document.querySelector('.action-list a[href="about.html"] strong');
+    if (aboutLink) aboutLink.textContent = "Про Hugo";
+    const platformLink = document.querySelector('.action-list a[href="platform.html"] strong');
+    if (platformLink) platformLink.textContent = "Про Hugo Media Group";
+    return;
+  }
+
+  if (page === "about") {
+    setCtaLink(
+      document.querySelector(".about-value-cta"),
+      "Домовитись про консультацію з Hugo"
+    );
+    return;
+  }
+
+  if (page === "platform") {
+    setCtaLink(
+      document.querySelector(".platform-value-cta"),
+      "Стати партнером Hugo Media Group"
+    );
+    setCtaLink(
+      document.querySelector(".editorial-page-actions .action-card.action-primary"),
+      "Домовитись про консультацію"
+    );
+    return;
+  }
+
+  if (page === "business") {
+    const mainCta = document.querySelector(".platform-unites .platform-value-cta");
+    setCtaLink(mainCta, "Обговорити рекламу");
+    if (mainCta && !document.querySelector("[data-business-mediakit]")) {
+      const mediaKitCta = mainCta.cloneNode(true);
+      mediaKitCta.dataset.businessMediakit = "true";
+      setCtaLink(mediaKitCta, "Отримати медіакіт");
+      mainCta.insertAdjacentElement("afterend", mediaKitCta);
+    }
+    return;
+  }
+
+  const pageCtas = {
+    legalization: "Отримати консультацію по документах",
+    media: "Запропонувати тему або інтеграцію",
+    partners: "Запропонувати співпрацю"
+  };
+  setCtaLink(
+    document.querySelector(".editorial-page-actions .action-card.action-primary"),
+    pageCtas[page]
+  );
+}
+
 function setLanguage(lang) {
   const dictionary = I18N[lang] || I18N.ua;
   document.documentElement.lang = lang === "ua" ? "uk" : lang;
@@ -399,6 +468,7 @@ function setLanguage(lang) {
   const page = document.body.dataset.page;
   if (page && PAGE_TITLES[lang]?.[page]) document.title = PAGE_TITLES[lang][page];
   localStorage.setItem("hugoLanguage", lang);
+  applyPageCtas();
 }
 
 function initLanguageSwitcher() {
