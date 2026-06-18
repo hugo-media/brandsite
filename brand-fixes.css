@@ -38,3 +38,122 @@
 .editorial-logo img {
   filter: grayscale(1) contrast(1.08);
 }
+
+.video-page,
+.split-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.video-page .editorial-hero,
+.split-page .editorial-hero {
+  min-height: min(760px, calc(100svh - 96px));
+  grid-template-columns: minmax(0, 760px);
+  align-items: center;
+}
+
+.video-page .editorial-copy,
+.split-page .editorial-copy {
+  max-width: 760px;
+}
+
+.video-page .editorial-photo,
+.split-page .editorial-logo,
+.split-page .editorial-photo {
+  display: none;
+}
+
+.split-page::before,
+.split-page::after {
+  content: none !important;
+}
+
+body[data-page="business"] .bg-video-overlay {
+  background: rgba(9, 9, 15, 0.72);
+}
+
+.split-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  background: #09090f;
+}
+
+.split-bg__logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: #09090f var(--brand-logo-bg) center / contain no-repeat;
+}
+
+.split-bg__video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-bg__blend {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(9, 9, 15, 1) 46%, rgba(9, 9, 15, 0) 58%);
+}
+
+.split-bg__tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(9, 9, 15, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  video[class*="bg"] {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .video-page .editorial-hero,
+  .split-page .editorial-hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-top: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-bg__logo {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
+
+  .split-bg__video {
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
+
+  .split-bg__blend {
+    background: linear-gradient(180deg, rgba(9, 9, 15, 0) 42%, rgba(9, 9, 15, 1) 54%);
+  }
+}
+
+@media (max-width: 520px) {
+  .video-page .editorial-hero,
+  .split-page .editorial-hero {
+    padding-top: 155px;
+  }
+}
