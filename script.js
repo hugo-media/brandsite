@@ -45,28 +45,31 @@ const I18N = {
 
 const PAGE_TITLES = {
   ua: {
-    about: "Про Hugo — засновник Hugo Media Group",
+    about: "Про Hugo — журналіст, підприємець, засновник Hugo Media Group",
+    consultation: "Консультація з Hugo — Hugo Media Group",
     platform: "Hugo Media Group — медійна платформа для українців у Польщі",
     media: "Медіа-платформа — Hugo Media Group",
-    legalization: "Легалізація в Польщі — Hugo Media Group",
+    legalization: "Легалізація в Польщі — Hugo Media Group × Axis Legalisation",
     business: "Реклама для бізнесу — Hugo Media Group",
     partners: "Співпраця — Hugo Media Group",
     "media-kit": "Медіакіт Hugo Media Group — реклама, аудиторія та інтеграції"
   },
   en: {
-    about: "About Hugo — founder of Hugo Media Group",
+    about: "About Hugo — journalist, entrepreneur, founder of Hugo Media Group",
+    consultation: "Consultation with Hugo — Hugo Media Group",
     platform: "Hugo Media Group — media platform for Ukrainians in Poland",
     media: "Media platform — Hugo Media Group",
-    legalization: "Legalization in Poland — Hugo Media Group",
+    legalization: "Legalization in Poland — Hugo Media Group × Axis Legalisation",
     business: "Business advertising — Hugo Media Group",
     partners: "Cooperation — Hugo Media Group",
     "media-kit": "Hugo Media Group media kit — advertising, audience and integrations"
   },
   pl: {
-    about: "O Hugo — założyciel Hugo Media Group",
+    about: "O Hugo — dziennikarz, przedsiębiorca, założyciel Hugo Media Group",
+    consultation: "Konsultacja z Hugo — Hugo Media Group",
     platform: "Hugo Media Group — platforma medialna dla Ukraińców w Polsce",
     media: "Platforma medialna — Hugo Media Group",
-    legalization: "Legalizacja w Polsce — Hugo Media Group",
+    legalization: "Legalizacja w Polsce — Hugo Media Group × Axis Legalisation",
     business: "Reklama dla biznesu — Hugo Media Group",
     partners: "Współpraca — Hugo Media Group",
     "media-kit": "Mediakit Hugo Media Group — reklama, publiczność i integracje"
@@ -128,7 +131,7 @@ function applyPageCtas() {
   const page = document.body.dataset.page || "home";
 
   if (page === "home") {
-    setExternalLink(document.querySelector(".action-list .action-card.action-primary"), HUGO_LINKS.consultation, "Домовитись про консультацію");
+    setInternalLink(document.querySelector(".action-list .action-card.action-primary"), "consultation.html", "Домовитись про консультацію");
     const aboutLink = document.querySelector('.action-list a[href="about.html"] strong');
     if (aboutLink) aboutLink.textContent = "Про Hugo";
     const platformLink = document.querySelector('.action-list a[href="platform.html"] strong');
@@ -136,10 +139,9 @@ function applyPageCtas() {
     return;
   }
 
-  if (page === "about") {
-    setExternalLink(document.querySelector(".about-value-cta"), HUGO_LINKS.consultation, "Домовитись про консультацію з Hugo");
-    return;
-  }
+  if (page === "about") return;
+  if (page === "consultation") return;
+  if (page === "legalization") return;
 
   if (page === "platform") {
     setExternalLink(document.querySelector(".platform-value-cta"), HUGO_LINKS.consultation, "Стати партнером Hugo Media Group");
@@ -163,7 +165,6 @@ function applyPageCtas() {
   }
 
   const pageCtas = {
-    legalization: "Отримати консультацію по документах",
     media: "Запропонувати тему або інтеграцію",
     partners: "Запропонувати співпрацю",
     "media-kit": "Отримати умови реклами"
