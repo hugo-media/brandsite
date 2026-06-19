@@ -127,6 +127,12 @@ body[data-page="business"] .bg-video-overlay {
     rgba(9, 9, 15, 0.34) 100%);
 }
 
+.proof-card img {
+  object-fit: contain !important;
+  padding: 10px;
+  background: #f5f3f0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   video[class*="bg"] {
     display: none;
