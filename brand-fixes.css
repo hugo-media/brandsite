@@ -213,10 +213,22 @@ body[data-page="home"] h1 {
   content: none !important;
 }
 
+body[data-page="business"] {
+  background: #09090f;
+}
+
+body[data-page="business"] .bg-video {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #09090f;
+  filter: saturate(1.05) contrast(1.04) brightness(0.9);
+}
+
 body[data-page="business"] .bg-video-overlay {
   background:
-    radial-gradient(circle at 50% 70%, rgba(116, 71, 255, 0.22), transparent 26rem),
-    rgba(9, 9, 15, 0.7);
+    radial-gradient(circle at 50% 72%, rgba(116, 71, 255, 0.2), transparent 27rem),
+    linear-gradient(90deg, rgba(9, 9, 15, 0.72) 0%, rgba(9, 9, 15, 0.38) 48%, rgba(9, 9, 15, 0.72) 100%),
+    rgba(9, 9, 15, 0.28);
 }
 
 .split-bg {
@@ -298,6 +310,17 @@ body[data-page="business"] .bg-video-overlay {
 }
 
 @media (max-width: 768px) {
+  body[data-page="business"] .bg-video {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  body[data-page="business"] .bg-video-overlay {
+    background:
+      radial-gradient(circle at 50% 72%, rgba(116, 71, 255, 0.2), transparent 24rem),
+      rgba(9, 9, 15, 0.54);
+  }
+
   .split-bg__logo {
     top: auto;
     right: 0;
