@@ -43,13 +43,19 @@ const HUGO_MEDIA_METRICS = [
 ];
 
 const HUGO_MEDIA_ASSETS = [
-  { platform: "TikTok", value: "40 000+", note: "підписників · місячні перегляди підтверджуються скріншотами та надаються за запитом" },
-  { platform: "Facebook", value: "31 000+", note: "підписників · місячні перегляди підтверджуються скріншотами та надаються за запитом" },
+  { platform: "TikTok", value: "40 000+", note: "підписників · 7M переглядів відео за період зі скріншоту", screenshot: "tiktok.png" },
+  { platform: "Facebook", value: "31 000+", note: "підписників · 5 591 597 переглядів за період зі скріншоту", screenshot: "facebook.png" },
   { platform: "Telegram Hugo Media", value: "3 300+", note: "підписників" },
-  { platform: "Instagram", value: "1 100+", note: "підписників · нова сторінка після масового блокування попередніх акаунтів, канал активно розвивається" },
+  { platform: "Instagram", value: "1 100+", note: "підписників · нова сторінка після масового блокування попередніх акаунтів, канал активно розвивається · 449 346 переглядів за 60 днів", screenshot: "insta.jpeg" },
   { platform: "Telegram Легалізація", value: "150+", note: "підписників" },
   { platform: "YouTube", value: "Shorts", note: "доданий у медійну систему Hugo Media Group, контент адаптується під YouTube Shorts / відеоформат" },
   { platform: "Географія аудиторії", value: "Польща · Україна · Європа", note: "основні ринки" }
+];
+
+const HUGO_PLATFORM_VIEWS = [
+  { platform: "TikTok", value: "7M", note: "переглядів відео за період зі скріншоту", screenshot: "tiktok.png" },
+  { platform: "Facebook", value: "5 591 597", note: "переглядів за період зі скріншоту", screenshot: "facebook.png" },
+  { platform: "Instagram", value: "449 346", note: "переглядів за 60 днів. Нова сторінка після масового блокування попередніх акаунтів.", screenshot: "insta.jpeg" }
 ];
 
 const HUGO_CONTENT_EXAMPLES = [];
