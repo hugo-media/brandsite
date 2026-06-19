@@ -39,6 +39,23 @@
   filter: grayscale(1) contrast(1.08);
 }
 
+.verified {
+  width: 30px !important;
+  min-width: 30px !important;
+  max-width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  aspect-ratio: 1 / 1;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 30px;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  line-height: 1;
+}
+
 body:not([data-page]) .hero-photo {
   height: 610px;
 }
