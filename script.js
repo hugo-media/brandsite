@@ -60,6 +60,31 @@ const HUGO_PLATFORM_VIEWS = [
 
 const HUGO_CONTENT_EXAMPLES = [];
 
+const HUGO_STRUCTURED_DATA = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Сергій Гальчук",
+    alternateName: "Hugo",
+    jobTitle: "Незалежний міжнародний журналіст, автор Hugo Media Group",
+    description: "Незалежний міжнародний журналіст, блогер, підприємець і автор медіаплатформи Hugo Media Group.",
+    url: "https://hugosite-lac.vercel.app/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Hugo Media Group",
+    description: "Авторська медіаплатформа про людей, бізнес і життя за кордоном.",
+    url: "https://hugosite-lac.vercel.app/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Hugo Media Group",
+    url: "https://hugosite-lac.vercel.app/"
+  }
+];
+
 const I18N = {
   ua: {
     "nav.home": "На головну",
@@ -138,6 +163,15 @@ function showToast(message) {
   toast.classList.add("is-visible");
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+}
+
+function injectStructuredData() {
+  if (document.querySelector("script[data-hugo-jsonld]")) return;
+  const structuredData = document.createElement("script");
+  structuredData.type = "application/ld+json";
+  structuredData.dataset.hugoJsonld = "true";
+  structuredData.textContent = JSON.stringify(HUGO_STRUCTURED_DATA);
+  document.head.appendChild(structuredData);
 }
 
 function setExternalLink(element, href, text) {
@@ -249,5 +283,6 @@ function initLanguageSwitcher() {
   setLanguage(savedLanguage);
 }
 
+injectStructuredData();
 applyEditableLinks();
 initLanguageSwitcher();
