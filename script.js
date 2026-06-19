@@ -12,54 +12,6 @@ const HUGO_STATUS = {
   title: "Незалежний міжнародний журналіст, автор Hugo Media Group, блогер і підприємець"
 };
 
-const HUGO_PACKAGES = [
-  {
-    name: "Стартер",
-    price: "300 €",
-    note: "1 знімальний день, 2–3 години зйомки, 30+ відео / коротких матеріалів і адаптація для TikTok, Instagram, Facebook і YouTube."
-  },
-  {
-    name: "Стандарт",
-    price: "1 000 €",
-    note: "4 знімальні дні — 2 на тиждень, 30+ відео з кожного знімального дня, системний потік контенту і адаптація для TikTok, Instagram, Facebook і YouTube."
-  },
-  {
-    name: "Максимум",
-    price: "2 000 €",
-    note: "8 знімальних днів за місяць, 30+ відео з кожного знімального дня, повноцінна медіа-присутність і адаптація для TikTok, Instagram, Facebook і YouTube."
-  },
-  {
-    name: "Партнерство в тематичному напрямку",
-    price: "індивідуально",
-    note: "Для сервісів, експертів і компаній, які хочуть бути присутніми в конкретній темі Hugo Media Group."
-  }
-];
-
-const HUGO_MEDIA_METRICS = [
-  { value: "100 000+", label: "сукупна аудиторія проєктів" },
-  { value: "6 000 000+", label: "сукупні місячні перегляди за даними основних платформ Hugo Media Group" },
-  { value: "30+", label: "медійних інтеграцій" },
-  { value: "100+", label: "контактів, звернень і ділових комунікацій" }
-];
-
-const HUGO_MEDIA_ASSETS = [
-  { platform: "TikTok", value: "40 000+", note: "підписників · 7M переглядів відео за період зі скріншоту", screenshot: "tiktok.png" },
-  { platform: "Facebook", value: "31 000+", note: "підписників · 5 591 597 переглядів за період зі скріншоту", screenshot: "facebook.png" },
-  { platform: "Telegram Hugo Media", value: "3 300+", note: "підписників" },
-  { platform: "Instagram", value: "1 100+", note: "підписників · нова сторінка після масового блокування попередніх акаунтів, канал активно розвивається · 449 346 переглядів за 60 днів", screenshot: "insta.jpeg" },
-  { platform: "Telegram Легалізація", value: "150+", note: "підписників" },
-  { platform: "YouTube", value: "Shorts", note: "доданий у медійну систему Hugo Media Group, контент адаптується під YouTube Shorts / відеоформат" },
-  { platform: "Географія аудиторії", value: "Польща · Україна · Європа", note: "основні ринки" }
-];
-
-const HUGO_PLATFORM_VIEWS = [
-  { platform: "TikTok", value: "7M", note: "переглядів відео за період зі скріншоту", screenshot: "tiktok.png" },
-  { platform: "Facebook", value: "5 591 597", note: "переглядів за період зі скріншоту", screenshot: "facebook.png" },
-  { platform: "Instagram", value: "449 346", note: "переглядів за 60 днів. Нова сторінка після масового блокування попередніх акаунтів.", screenshot: "insta.jpeg" }
-];
-
-const HUGO_CONTENT_EXAMPLES = [];
-
 const HUGO_STRUCTURED_DATA = [
   {
     "@context": "https://schema.org",
@@ -93,9 +45,33 @@ const I18N = {
     "cta.write": "Обговорити співпрацю",
     "cta.consult": "Обговорити співпрацю",
     "cta.consultSub": "Медійна присутність · інтеграції · партнерства",
-    "about.title": "Hugo",
-    "about.intro1": "Мене звати Сергій. У медіа я працюю під брендом Hugo.",
-    "platform.p2": "Hugo Media Group — авторська медіаплатформа про людей, бізнес і життя за кордоном."
+    "home.kicker": "Авторська медіаплатформа",
+    "home.bio.main": "Авторська медіаплатформа про людей, бізнес і життя за кордоном.",
+    "home.bio.help": "Допомагаю підприємцям ставати видимими, зрозумілими й довіреними через історії, інтерв’ю та медійні інтеграції.",
+    "home.bio.statement": "Показую не просто бізнес.<br>Показую людину за бізнесом.",
+    "home.bio.name": "Сергій Гальчук / Hugo",
+    "home.bio.role": "Блогер та Незалежний міжнародний журналіст",
+    "home.cta.main": "Обговорити співпрацю",
+    "home.cta.mainSub": "Медійна присутність · інтеграції · партнерства",
+    "home.cta.mediaKit": "Отримати медіакіт",
+    "home.cta.mediaKitSub": "Аудиторія, формати співпраці та інтеграції",
+    "home.cta.formats": "Подивитись формати",
+    "home.cta.formatsSub": "Формати для підприємців і бізнесу",
+    "home.directions.kicker": "Напрямки",
+    "home.directions.title": "З чим ми працюємо",
+    "home.directions.subtitle": "Основні напрямки Hugo Media Group: медійна присутність для бізнесу, історії підприємців, медійні інтеграції, тематичні вертикалі та партнерські проєкти.",
+    "home.card.media": "Медіа-платформа",
+    "home.card.mediaSub": "Контент, історії, пояснення та комунікація з українцями в Польщі.",
+    "home.card.legalization": "Легалізація в Польщі",
+    "home.card.legalizationSub": "Тематична вертикаль: документи, PESEL, ZUS, UKR і практичні питання.",
+    "home.card.business": "Для бізнесу",
+    "home.card.businessSub": "Медійна присутність, особистий бренд, довіра та інтеграції.",
+    "home.card.partners": "Співпраця",
+    "home.card.partnersSub": "Інтеграції, інтерв’ю, колаборації та тематичні напрямки.",
+    "home.card.about": "Про Hugo",
+    "home.card.aboutSub": "Автор платформи, журналістський підхід, бізнес і довіра.",
+    "home.card.platform": "Про Hugo Media Group",
+    "home.card.platformSub": "Екосистема контенту, аудиторії, бізнесу і партнерств."
   },
   en: {
     "nav.home": "Home",
@@ -104,9 +80,33 @@ const I18N = {
     "cta.write": "Discuss cooperation",
     "cta.consult": "Discuss cooperation",
     "cta.consultSub": "Media presence · integrations · partnerships",
-    "about.title": "Hugo",
-    "about.intro1": "My name is Serhii. In media, I work under the Hugo brand.",
-    "platform.p2": "Hugo Media Group is an author-led media platform about people, business and life abroad."
+    "home.kicker": "Author-led media platform",
+    "home.bio.main": "An author-led media platform about people, business and life abroad.",
+    "home.bio.help": "I help entrepreneurs become visible, clear and trusted through stories, interviews and media integrations.",
+    "home.bio.statement": "I do not just show the business.<br>I show the person behind the business.",
+    "home.bio.name": "Serhii Halchuk / Hugo",
+    "home.bio.role": "Blogger and independent international journalist",
+    "home.cta.main": "Discuss cooperation",
+    "home.cta.mainSub": "Media presence · integrations · partnerships",
+    "home.cta.mediaKit": "Get the media kit",
+    "home.cta.mediaKitSub": "Audience, cooperation formats and integrations",
+    "home.cta.formats": "View formats",
+    "home.cta.formatsSub": "Formats for entrepreneurs and business",
+    "home.directions.kicker": "Directions",
+    "home.directions.title": "What we work with",
+    "home.directions.subtitle": "The main Hugo Media Group directions: media presence for business, entrepreneur stories, media integrations, thematic verticals and partnership projects.",
+    "home.card.media": "Media platform",
+    "home.card.mediaSub": "Content, stories, explanations and communication with Ukrainians in Poland.",
+    "home.card.legalization": "Legalization in Poland",
+    "home.card.legalizationSub": "A thematic vertical: documents, PESEL, ZUS, UKR status and practical questions.",
+    "home.card.business": "For business",
+    "home.card.businessSub": "Media presence, personal brand, trust and integrations.",
+    "home.card.partners": "Cooperation",
+    "home.card.partnersSub": "Integrations, interviews, collaborations and thematic directions.",
+    "home.card.about": "About Hugo",
+    "home.card.aboutSub": "Platform author, journalistic approach, business and trust.",
+    "home.card.platform": "About Hugo Media Group",
+    "home.card.platformSub": "An ecosystem of content, audience, business and partnerships."
   },
   pl: {
     "nav.home": "Strona główna",
@@ -115,14 +115,39 @@ const I18N = {
     "cta.write": "Omówić współpracę",
     "cta.consult": "Omówić współpracę",
     "cta.consultSub": "Obecność medialna · integracje · partnerstwa",
-    "about.title": "Hugo",
-    "about.intro1": "Nazywam się Serhii. W mediach działam pod marką Hugo.",
-    "platform.p2": "Hugo Media Group to autorska platforma medialna o ludziach, biznesie i życiu za granicą."
+    "home.kicker": "Autorska platforma medialna",
+    "home.bio.main": "Autorska platforma medialna o ludziach, biznesie i życiu za granicą.",
+    "home.bio.help": "Pomagam przedsiębiorcom stać się widocznymi, zrozumiałymi i wiarygodnymi poprzez historie, wywiady oraz integracje medialne.",
+    "home.bio.statement": "Pokazuję nie tylko biznes.<br>Pokazuję człowieka stojącego za biznesem.",
+    "home.bio.name": "Serhii Halchuk / Hugo",
+    "home.bio.role": "Bloger i niezależny dziennikarz międzynarodowy",
+    "home.cta.main": "Omówić współpracę",
+    "home.cta.mainSub": "Obecność medialna · integracje · partnerstwa",
+    "home.cta.mediaKit": "Pobrać mediakit",
+    "home.cta.mediaKitSub": "Odbiorcy, formaty współpracy i integracje",
+    "home.cta.formats": "Zobaczyć formaty",
+    "home.cta.formatsSub": "Formaty dla przedsiębiorców i biznesu",
+    "home.directions.kicker": "Kierunki",
+    "home.directions.title": "Z czym pracujemy",
+    "home.directions.subtitle": "Główne kierunki Hugo Media Group: obecność medialna dla biznesu, historie przedsiębiorców, integracje medialne, piony tematyczne i projekty partnerskie.",
+    "home.card.media": "Platforma medialna",
+    "home.card.mediaSub": "Treści, historie, wyjaśnienia i komunikacja z Ukraińcami w Polsce.",
+    "home.card.legalization": "Legalizacja w Polsce",
+    "home.card.legalizationSub": "Pion tematyczny: dokumenty, PESEL, ZUS, UKR i praktyczne pytania.",
+    "home.card.business": "Dla biznesu",
+    "home.card.businessSub": "Obecność medialna, marka osobista, zaufanie i integracje.",
+    "home.card.partners": "Współpraca",
+    "home.card.partnersSub": "Integracje, wywiady, współprace i kierunki tematyczne.",
+    "home.card.about": "O Hugo",
+    "home.card.aboutSub": "Autor platformy, podejście dziennikarskie, biznes i zaufanie.",
+    "home.card.platform": "O Hugo Media Group",
+    "home.card.platformSub": "Ekosystem treści, odbiorców, biznesu i partnerstw."
   }
 };
 
 const PAGE_TITLES = {
   ua: {
+    home: "Hugo Media Group — медійна присутність для бізнесу",
     about: "Сергій Гальчук / Hugo — незалежний міжнародний журналіст і автор Hugo Media Group",
     consultation: "Консультація з Hugo — Hugo Media Group",
     platform: "Hugo Media Group — авторська медіаплатформа для українців за кордоном",
@@ -133,6 +158,7 @@ const PAGE_TITLES = {
     "media-kit": "Медіакіт Hugo Media Group — аудиторія, формати співпраці та інтеграції"
   },
   en: {
+    home: "Hugo Media Group — media presence for business",
     about: "Serhii Halchuk / Hugo — independent international journalist and author of Hugo Media Group",
     consultation: "Consultation with Hugo — Hugo Media Group",
     platform: "Hugo Media Group — author-led media platform for Ukrainians abroad",
@@ -143,6 +169,7 @@ const PAGE_TITLES = {
     "media-kit": "Hugo Media Group media kit — audience, cooperation formats and integrations"
   },
   pl: {
+    home: "Hugo Media Group — obecność medialna dla biznesu",
     about: "Serhii Halchuk / Hugo — niezależny dziennikarz międzynarodowy i autor Hugo Media Group",
     consultation: "Konsultacja z Hugo — Hugo Media Group",
     platform: "Hugo Media Group — autorska platforma medialna dla Ukraińców za granicą",
@@ -156,6 +183,7 @@ const PAGE_TITLES = {
 
 const toast = document.querySelector(".toast");
 let toastTimer;
+let currentLanguage = localStorage.getItem("hugoLanguage") || "ua";
 
 function showToast(message) {
   if (!toast) return;
@@ -193,7 +221,6 @@ function setInternalLink(element, href, text) {
 
 function setLabel(element, text) {
   const label = element.querySelector("strong") || element;
-  label.removeAttribute("data-i18n");
   label.textContent = text;
 }
 
@@ -216,13 +243,10 @@ function applyEditableLinks() {
 
 function applyPageCtas() {
   const page = document.body.dataset.page || "home";
+  const dictionary = I18N[currentLanguage] || I18N.ua;
 
   if (page === "home") {
-    setExternalLink(document.querySelector(".action-list .action-card.action-primary"), HUGO_LINKS.telegram, "Обговорити співпрацю");
-    const aboutLink = document.querySelector('.service-stack a[href="about.html"] strong');
-    if (aboutLink) aboutLink.textContent = "Про Hugo";
-    const platformLink = document.querySelector('.service-stack a[href="platform.html"] strong');
-    if (platformLink) platformLink.textContent = "Про Hugo Media Group";
+    setExternalLink(document.querySelector(".action-list .action-card.action-primary"), HUGO_LINKS.telegram);
     return;
   }
 
@@ -231,14 +255,14 @@ function applyPageCtas() {
   if (page === "legalization") return;
 
   if (page === "platform") {
-    setExternalLink(document.querySelector(".platform-value-cta"), HUGO_LINKS.telegram, "Стати партнером Hugo Media Group");
-    setExternalLink(document.querySelector(".editorial-page-actions .action-card.action-primary"), HUGO_LINKS.telegram, "Обговорити співпрацю");
+    setExternalLink(document.querySelector(".platform-value-cta"), HUGO_LINKS.telegram, dictionary["cta.write"] || "Обговорити співпрацю");
+    setExternalLink(document.querySelector(".editorial-page-actions .action-card.action-primary"), HUGO_LINKS.telegram, dictionary["cta.write"] || "Обговорити співпрацю");
     return;
   }
 
   if (page === "business") {
     const mainCta = document.querySelector(".platform-unites .platform-value-cta");
-    setExternalLink(mainCta, HUGO_LINKS.telegram, "Обговорити співпрацю");
+    setExternalLink(mainCta, HUGO_LINKS.telegram, dictionary["cta.write"] || "Обговорити співпрацю");
     const mediaKitCta = document.querySelector("[data-business-mediakit]");
     if (mediaKitCta) {
       setExternalLink(mediaKitCta, HUGO_LINKS.telegram, "Отримати комерційну пропозицію");
@@ -247,11 +271,23 @@ function applyPageCtas() {
   }
 
   const pageCtas = {
-    media: "Запропонувати тему або інтеграцію",
-    partners: "Запропонувати співпрацю",
-    "media-kit": "Обговорити співпрацю"
+    media: {
+      ua: "Запропонувати тему або інтеграцію",
+      en: "Suggest a topic or integration",
+      pl: "Zaproponować temat lub integrację"
+    },
+    partners: {
+      ua: "Запропонувати співпрацю",
+      en: "Suggest cooperation",
+      pl: "Zaproponować współpracę"
+    },
+    "media-kit": {
+      ua: "Обговорити співпрацю",
+      en: "Discuss cooperation",
+      pl: "Omówić współpracę"
+    }
   };
-  const text = pageCtas[page];
+  const text = pageCtas[page]?.[currentLanguage];
   if (text) {
     setExternalLink(document.querySelector(".editorial-page-actions .action-card.action-primary"), HUGO_LINKS.telegram, text);
     setExternalLink(document.querySelector(".platform-unites .platform-value-cta"), HUGO_LINKS.telegram, text);
@@ -259,18 +295,23 @@ function applyPageCtas() {
 }
 
 function setLanguage(lang) {
+  currentLanguage = lang;
   const dictionary = I18N[lang] || I18N.ua;
   document.documentElement.lang = lang === "ua" ? "uk" : lang;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = dictionary[element.dataset.i18n];
     if (value) element.textContent = value;
   });
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    const value = dictionary[element.dataset.i18nHtml];
+    if (value) element.innerHTML = value;
+  });
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);
     button.setAttribute("aria-pressed", button.dataset.lang === lang ? "true" : "false");
   });
-  const page = document.body.dataset.page;
-  if (page && PAGE_TITLES[lang]?.[page]) document.title = PAGE_TITLES[lang][page];
+  const page = document.body.dataset.page || "home";
+  if (PAGE_TITLES[lang]?.[page]) document.title = PAGE_TITLES[lang][page];
   localStorage.setItem("hugoLanguage", lang);
   applyPageCtas();
 }
