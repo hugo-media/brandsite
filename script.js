@@ -7,11 +7,23 @@ const HUGO_LINKS = {
   youtube: ""
 };
 
+const HUGO_STATUS = {
+  name: "Сергій Галчук / Hugo",
+  title: "Незалежний міжнародний журналіст, автор Hugo Media Group, блогер і підприємець"
+};
+
 const HUGO_PACKAGES = [
-  { name: "Публічний старт", price: "від 1000 zł" },
-  { name: "Історія підприємця", price: "від 2500 zł" },
-  { name: "Медійна присутність", price: "від 5000 zł / місяць" },
+  { name: "Публічний старт", price: "від 300 €" },
+  { name: "Історія підприємця", price: "від 1000 €" },
+  { name: "Медійна присутність", price: "від 2000 € / місяць" },
   { name: "Партнерство в тематичному напрямку", price: "індивідуально" }
+];
+
+const HUGO_MEDIA_METRICS = [
+  { value: "100 000+", label: "сукупна аудиторія проєктів" },
+  { value: "6 000 000+", label: "переглядів на місяць" },
+  { value: "30+", label: "рекламних інтеграцій" },
+  { value: "100+", label: "контактів, звернень і ділових комунікацій" }
 ];
 
 const HUGO_MEDIA_ASSETS = [
@@ -20,18 +32,10 @@ const HUGO_MEDIA_ASSETS = [
   { platform: "Telegram Hugo Media", value: "3 300+", note: "підписників" },
   { platform: "Telegram Легалізація", value: "150+", note: "підписників" },
   { platform: "Instagram", value: "1 100+", note: "новий акаунт, у розвитку" },
-  { platform: "Географія аудиторії", value: "Польща · Україна · Європа", note: "основні ринки" },
-  { platform: "Охоплення за 30 днів", value: "", note: "власник додасть" },
-  { platform: "Найкраще відео", value: "", note: "власник додасть" }
+  { platform: "Географія аудиторії", value: "Польща · Україна · Європа", note: "основні ринки" }
 ];
 
 const HUGO_CONTENT_EXAMPLES = [];
-
-const HUGO_STAT_SCREENSHOTS = [
-  { platform: "Instagram", image: "", label: "дані оновлюються" },
-  { platform: "TikTok", image: "", label: "дані оновлюються" },
-  { platform: "Facebook", image: "", label: "дані оновлюються" }
-];
 
 const I18N = {
   ua: {
@@ -42,7 +46,7 @@ const I18N = {
     "cta.consult": "Обговорити співпрацю",
     "cta.consultSub": "Медійна присутність · інтеграції · партнерства",
     "about.title": "Hugo",
-    "about.intro1": "Я Сергій, автор Hugo Media Group.",
+    "about.intro1": "Мене звати Сергій. У медіа я працюю під брендом Hugo.",
     "platform.p2": "Hugo Media Group — авторська медіаплатформа про людей, бізнес і життя за кордоном."
   },
   en: {
@@ -53,7 +57,7 @@ const I18N = {
     "cta.consult": "Discuss cooperation",
     "cta.consultSub": "Media presence · integrations · partnerships",
     "about.title": "Hugo",
-    "about.intro1": "I am Serhii, author of Hugo Media Group.",
+    "about.intro1": "My name is Serhii. In media, I work under the Hugo brand.",
     "platform.p2": "Hugo Media Group is an author-led media platform about people, business and life abroad."
   },
   pl: {
@@ -64,39 +68,39 @@ const I18N = {
     "cta.consult": "Omówić współpracę",
     "cta.consultSub": "Obecność medialna · integracje · partnerstwa",
     "about.title": "Hugo",
-    "about.intro1": "Jestem Serhii, autorem Hugo Media Group.",
+    "about.intro1": "Nazywam się Serhii. W mediach działam pod marką Hugo.",
     "platform.p2": "Hugo Media Group to autorska platforma medialna o ludziach, biznesie i życiu za granicą."
   }
 };
 
 const PAGE_TITLES = {
   ua: {
-    about: "Про Hugo — автор Hugo Media Group",
+    about: "Про Hugo — незалежний міжнародний журналіст і автор Hugo Media Group",
     consultation: "Консультація з Hugo — Hugo Media Group",
-    platform: "Hugo Media Group — медійна платформа для українців у Польщі",
+    platform: "Hugo Media Group — авторська медіаплатформа",
     media: "Медіа-платформа — Hugo Media Group",
     legalization: "Легалізація в Польщі — Hugo Media Group × Axis Legalisation",
-    business: "Для бізнесу — медійна присутність через Hugo Media Group",
+    business: "Медійна присутність для бізнесу — Hugo Media Group",
     partners: "Співпраця — Hugo Media Group",
     "media-kit": "Медіакіт Hugo Media Group — формати, аудиторія та пакети"
   },
   en: {
-    about: "About Hugo — author of Hugo Media Group",
+    about: "About Hugo — independent international journalist and author of Hugo Media Group",
     consultation: "Consultation with Hugo — Hugo Media Group",
-    platform: "Hugo Media Group — media platform for Ukrainians in Poland",
+    platform: "Hugo Media Group — author-led media platform",
     media: "Media platform — Hugo Media Group",
     legalization: "Legalization in Poland — Hugo Media Group × Axis Legalisation",
-    business: "For business — media presence through Hugo Media Group",
+    business: "Media presence for business — Hugo Media Group",
     partners: "Cooperation — Hugo Media Group",
     "media-kit": "Hugo Media Group media kit — formats, audience and packages"
   },
   pl: {
-    about: "O Hugo — autor Hugo Media Group",
+    about: "O Hugo — niezależny dziennikarz międzynarodowy i autor Hugo Media Group",
     consultation: "Konsultacja z Hugo — Hugo Media Group",
-    platform: "Hugo Media Group — platforma medialna dla Ukraińców w Polsce",
+    platform: "Hugo Media Group — autorska platforma medialna",
     media: "Platforma medialna — Hugo Media Group",
     legalization: "Legalizacja w Polsce — Hugo Media Group × Axis Legalisation",
-    business: "Dla biznesu — obecność medialna przez Hugo Media Group",
+    business: "Obecność medialna dla biznesu — Hugo Media Group",
     partners: "Współpraca — Hugo Media Group",
     "media-kit": "Mediakit Hugo Media Group — formaty, publiczność i pakiety"
   }
