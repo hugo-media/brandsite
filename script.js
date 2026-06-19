@@ -1,16 +1,28 @@
 const HUGO_LINKS = {
   consultation: "https://t.me/Hugo_media",
   telegram: "https://t.me/Hugo_media",
-  instagram: "",
-  facebook: "",
-  tiktok: "",
-  youtube: ""
+  instagram: "https://www.instagram.com/hugo.ax.l?igsh=ODZ0enU4aHA5cnNp&utm_source=qr",
+  facebook: "https://www.facebook.com/HugoStiglitzMedia?mibextid=wwXIfr&rdid=6bEocYcfdeEEHd5P&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18j3PUf9pc%2F%3Fmibextid%3DwwXIfr#",
+  tiktok: "https://www.tiktok.com/@_hugo_media?is_from_webapp=1&sender_device=pc",
+  youtube: "https://www.youtube.com/@hugo_media_pl",
+  axisLegalisation: "https://t.me/axis_legalisation",
+  shop: "https://t.me/hugo_media_shop"
 };
 
 const HUGO_STATUS = {
   name: "Сергій Гальчук / Hugo",
   title: "Незалежний міжнародний журналіст, автор Hugo Media Group, блогер і підприємець"
 };
+
+const HUGO_SOCIALS = [
+  { label: "TikTok", href: HUGO_LINKS.tiktok },
+  { label: "Instagram", href: HUGO_LINKS.instagram },
+  { label: "Facebook", href: HUGO_LINKS.facebook },
+  { label: "YouTube", href: HUGO_LINKS.youtube },
+  { label: "Telegram", href: HUGO_LINKS.telegram },
+  { label: "Легалізація", href: HUGO_LINKS.axisLegalisation, i18n: "global.axis" },
+  { label: "Hugo Media Shop", href: HUGO_LINKS.shop, i18n: "global.shop" }
+];
 
 const HUGO_STRUCTURED_DATA = [
   {
@@ -20,14 +32,16 @@ const HUGO_STRUCTURED_DATA = [
     alternateName: "Hugo",
     jobTitle: "Незалежний міжнародний журналіст, автор Hugo Media Group",
     description: "Незалежний міжнародний журналіст, блогер, підприємець і автор медіаплатформи Hugo Media Group.",
-    url: "https://hugosite-lac.vercel.app/"
+    url: "https://hugosite-lac.vercel.app/",
+    sameAs: [HUGO_LINKS.telegram, HUGO_LINKS.instagram, HUGO_LINKS.facebook, HUGO_LINKS.tiktok, HUGO_LINKS.youtube]
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Hugo Media Group",
     description: "Авторська медіаплатформа про людей, бізнес і життя за кордоном.",
-    url: "https://hugosite-lac.vercel.app/"
+    url: "https://hugosite-lac.vercel.app/",
+    sameAs: [HUGO_LINKS.telegram, HUGO_LINKS.instagram, HUGO_LINKS.facebook, HUGO_LINKS.tiktok, HUGO_LINKS.youtube]
   },
   {
     "@context": "https://schema.org",
@@ -45,6 +59,10 @@ const I18N = {
     "cta.write": "Обговорити співпрацю",
     "cta.consult": "Обговорити співпрацю",
     "cta.consultSub": "Медійна присутність · інтеграції · партнерства",
+    "global.contact": "Зв’язатись",
+    "global.footer": "Соцмережі Hugo Media Group",
+    "global.axis": "Легалізація",
+    "global.shop": "Hugo Media Shop",
     "home.kicker": "Авторська медіаплатформа",
     "home.bio.main": "Авторська медіаплатформа про людей, бізнес і життя за кордоном.",
     "home.bio.help": "Допомагаю підприємцям ставати видимими, зрозумілими й довіреними через історії, інтерв’ю та медійні інтеграції.",
@@ -80,6 +98,10 @@ const I18N = {
     "cta.write": "Discuss cooperation",
     "cta.consult": "Discuss cooperation",
     "cta.consultSub": "Media presence · integrations · partnerships",
+    "global.contact": "Contact",
+    "global.footer": "Hugo Media Group social links",
+    "global.axis": "Legalization",
+    "global.shop": "Hugo Media Shop",
     "home.kicker": "Author-led media platform",
     "home.bio.main": "An author-led media platform about people, business and life abroad.",
     "home.bio.help": "I help entrepreneurs become visible, clear and trusted through stories, interviews and media integrations.",
@@ -115,6 +137,10 @@ const I18N = {
     "cta.write": "Omówić współpracę",
     "cta.consult": "Omówić współpracę",
     "cta.consultSub": "Obecność medialna · integracje · partnerstwa",
+    "global.contact": "Kontakt",
+    "global.footer": "Social media Hugo Media Group",
+    "global.axis": "Legalizacja",
+    "global.shop": "Hugo Media Shop",
     "home.kicker": "Autorska platforma medialna",
     "home.bio.main": "Autorska platforma medialna o ludziach, biznesie i życiu za granicą.",
     "home.bio.help": "Pomagam przedsiębiorcom stać się widocznymi, zrozumiałymi i wiarygodnymi poprzez historie, wywiady oraz integracje medialne.",
@@ -241,6 +267,37 @@ function applyEditableLinks() {
   });
 }
 
+function injectGlobalContact() {
+  if (document.querySelector(".floating-contact")) return;
+  const contact = document.createElement("a");
+  contact.className = "floating-contact";
+  contact.href = HUGO_LINKS.telegram;
+  contact.target = "_blank";
+  contact.rel = "noopener noreferrer";
+  contact.setAttribute("aria-label", "Зв’язатись зі мною в Telegram");
+  contact.innerHTML = `
+    <span class="floating-contact__icon" aria-hidden="true">↗</span>
+    <span class="floating-contact__text" data-i18n="global.contact">Зв’язатись</span>
+  `;
+  document.body.appendChild(contact);
+}
+
+function injectSocialFooter() {
+  if (document.querySelector(".site-social-footer")) return;
+  const footer = document.createElement("footer");
+  footer.className = "site-social-footer";
+  const links = HUGO_SOCIALS.map((item) => {
+    const i18n = item.i18n ? ` data-i18n="${item.i18n}"` : "";
+    return `<a href="${item.href}" target="_blank" rel="noopener noreferrer"${i18n}>${item.label}</a>`;
+  }).join("");
+
+  footer.innerHTML = `
+    <p data-i18n="global.footer">Соцмережі Hugo Media Group</p>
+    <div class="site-social-footer__links">${links}</div>
+  `;
+  document.body.appendChild(footer);
+}
+
 function applyPageCtas() {
   const page = document.body.dataset.page || "home";
   const dictionary = I18N[currentLanguage] || I18N.ua;
@@ -325,5 +382,7 @@ function initLanguageSwitcher() {
 }
 
 injectStructuredData();
+injectGlobalContact();
+injectSocialFooter();
 applyEditableLinks();
 initLanguageSwitcher();
