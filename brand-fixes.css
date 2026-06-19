@@ -39,6 +39,41 @@
   filter: grayscale(1) contrast(1.08);
 }
 
+body:not([data-page]) .hero-photo {
+  height: 610px;
+}
+
+body:not([data-page]) .hero-photo img {
+  object-position: 54% 0%;
+  filter: grayscale(1) contrast(1.12) brightness(0.98);
+  transform: scale(1.01);
+}
+
+body:not([data-page]) .hero-photo::before {
+  background:
+    linear-gradient(180deg, rgba(7, 7, 12, 0.04) 0%, rgba(7, 7, 12, 0.03) 43%, rgba(7, 7, 12, 0.58) 82%, rgba(7, 7, 12, 0.9) 100%),
+    radial-gradient(circle at 50% 46%, transparent 0, transparent 11rem, rgba(7, 7, 12, 0.12) 20rem, rgba(7, 7, 12, 0.48) 100%);
+}
+
+body:not([data-page]) .hero-photo::after {
+  height: 145px;
+}
+
+body:not([data-page]) .hero-identity {
+  bottom: 34px;
+}
+
+body:not([data-page]) .name-row {
+  max-width: 360px;
+  align-items: flex-end;
+}
+
+body:not([data-page]) h1 {
+  max-width: 320px;
+  font-size: clamp(2.35rem, 10vw, 3rem);
+  line-height: 0.98;
+}
+
 .video-page,
 .split-page {
   position: relative;
@@ -185,8 +220,31 @@ body[data-page="business"] .bg-video-overlay {
 }
 
 @media (max-width: 520px) {
+  body:not([data-page]) .hero-photo {
+    height: 590px;
+  }
+
+  body:not([data-page]) .hero-identity {
+    bottom: 30px;
+  }
+
+  body:not([data-page]) h1 {
+    max-width: 292px;
+    font-size: 2.38rem;
+  }
+
   .video-page .editorial-hero,
   .split-page .editorial-hero {
     padding-top: 155px;
+  }
+}
+
+@media (max-width: 390px) {
+  body:not([data-page]) .hero-photo {
+    height: 560px;
+  }
+
+  body:not([data-page]) h1 {
+    font-size: 2.18rem;
   }
 }
