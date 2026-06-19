@@ -38,7 +38,7 @@ const HUGO_PACKAGES = [
 const HUGO_MEDIA_METRICS = [
   { value: "100 000+", label: "сукупна аудиторія проєктів" },
   { value: "6 000 000+", label: "сукупні місячні перегляди за даними основних платформ Hugo Media Group" },
-  { value: "30+", label: "рекламних інтеграцій" },
+  { value: "30+", label: "медійних інтеграцій" },
   { value: "100+", label: "контактів, звернень і ділових комунікацій" }
 ];
 
@@ -98,34 +98,34 @@ const I18N = {
 
 const PAGE_TITLES = {
   ua: {
-    about: "Про Hugo — незалежний міжнародний журналіст і автор Hugo Media Group",
+    about: "Сергій Гальчук / Hugo — незалежний міжнародний журналіст і автор Hugo Media Group",
     consultation: "Консультація з Hugo — Hugo Media Group",
-    platform: "Hugo Media Group — авторська медіаплатформа",
+    platform: "Hugo Media Group — авторська медіаплатформа для українців за кордоном",
     media: "Медіа-платформа — Hugo Media Group",
-    legalization: "Легалізація в Польщі — Hugo Media Group × Axis Legalisation",
-    business: "Медійна присутність для бізнесу — Hugo Media Group",
-    partners: "Співпраця — Hugo Media Group",
-    "media-kit": "Медіакіт Hugo Media Group — формати, аудиторія та пакети"
+    legalization: "Легалізація в Польщі — тематична вертикаль Hugo Media Group",
+    business: "Медійна присутність для підприємців і бізнесу — Hugo Media Group",
+    partners: "Партнерства з Hugo Media Group — медійні інтеграції та доступ до аудиторії",
+    "media-kit": "Медіакіт Hugo Media Group — аудиторія, формати співпраці та інтеграції"
   },
   en: {
-    about: "About Hugo — independent international journalist and author of Hugo Media Group",
+    about: "Serhii Halchuk / Hugo — independent international journalist and author of Hugo Media Group",
     consultation: "Consultation with Hugo — Hugo Media Group",
-    platform: "Hugo Media Group — author-led media platform",
+    platform: "Hugo Media Group — author-led media platform for Ukrainians abroad",
     media: "Media platform — Hugo Media Group",
-    legalization: "Legalization in Poland — Hugo Media Group × Axis Legalisation",
-    business: "Media presence for business — Hugo Media Group",
-    partners: "Cooperation — Hugo Media Group",
-    "media-kit": "Hugo Media Group media kit — formats, audience and packages"
+    legalization: "Legalization in Poland — Hugo Media Group vertical",
+    business: "Media presence for entrepreneurs and business — Hugo Media Group",
+    partners: "Partnerships with Hugo Media Group — media integrations and audience access",
+    "media-kit": "Hugo Media Group media kit — audience, cooperation formats and integrations"
   },
   pl: {
-    about: "O Hugo — niezależny dziennikarz międzynarodowy i autor Hugo Media Group",
+    about: "Serhii Halchuk / Hugo — niezależny dziennikarz międzynarodowy i autor Hugo Media Group",
     consultation: "Konsultacja z Hugo — Hugo Media Group",
-    platform: "Hugo Media Group — autorska platforma medialna",
+    platform: "Hugo Media Group — autorska platforma medialna dla Ukraińców za granicą",
     media: "Platforma medialna — Hugo Media Group",
-    legalization: "Legalizacja w Polsce — Hugo Media Group × Axis Legalisation",
-    business: "Obecność medialna dla biznesu — Hugo Media Group",
-    partners: "Współpraca — Hugo Media Group",
-    "media-kit": "Mediakit Hugo Media Group — formaty, publiczność i pakiety"
+    legalization: "Legalizacja w Polsce — tematyczny kierunek Hugo Media Group",
+    business: "Obecność medialna dla przedsiębiorców i biznesu — Hugo Media Group",
+    partners: "Partnerstwa z Hugo Media Group — integracje medialne i dostęp do odbiorców",
+    "media-kit": "Mediakit Hugo Media Group — odbiorcy, formaty współpracy i integracje"
   }
 };
 
