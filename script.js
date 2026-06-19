@@ -7,6 +7,23 @@ const HUGO_LINKS = {
   youtube: ""
 };
 
+const HUGO_MEDIA_ASSETS = [
+  { platform: "TikTok", value: "40 000+", note: "підписників" },
+  { platform: "Facebook", value: "31 000+", note: "підписників" },
+  { platform: "Telegram Hugo Media", value: "3 300+", note: "підписників" },
+  { platform: "Telegram Легалізація", value: "150+", note: "підписників" },
+  { platform: "Instagram", value: "1 100+", note: "новий акаунт, у розвитку" },
+  { platform: "Географія аудиторії", value: "Польща · Україна · Європа", note: "основні ринки" },
+  { platform: "Охоплення за 30 днів", value: "", note: "власник додасть" },
+  { platform: "Найкраще відео", value: "", note: "власник додасть" }
+];
+
+const HUGO_STAT_SCREENSHOTS = [
+  { platform: "Instagram", image: "", label: "дані оновлюються" },
+  { platform: "TikTok", image: "", label: "дані оновлюються" },
+  { platform: "Facebook", image: "", label: "дані оновлюються" }
+];
+
 const I18N = {
   ua: {
     "nav.home": "На головну",
