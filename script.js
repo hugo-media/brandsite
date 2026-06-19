@@ -7,6 +7,13 @@ const HUGO_LINKS = {
   youtube: ""
 };
 
+const HUGO_PACKAGES = [
+  { name: "Публічний старт", price: "від 1000 zł" },
+  { name: "Історія підприємця", price: "від 2500 zł" },
+  { name: "Медійна присутність", price: "від 5000 zł / місяць" },
+  { name: "Партнерство в тематичному напрямку", price: "індивідуально" }
+];
+
 const HUGO_MEDIA_ASSETS = [
   { platform: "TikTok", value: "40 000+", note: "підписників" },
   { platform: "Facebook", value: "31 000+", note: "підписників" },
@@ -18,6 +25,8 @@ const HUGO_MEDIA_ASSETS = [
   { platform: "Найкраще відео", value: "", note: "власник додасть" }
 ];
 
+const HUGO_CONTENT_EXAMPLES = [];
+
 const HUGO_STAT_SCREENSHOTS = [
   { platform: "Instagram", image: "", label: "дані оновлюються" },
   { platform: "TikTok", image: "", label: "дані оновлюються" },
@@ -27,69 +36,69 @@ const HUGO_STAT_SCREENSHOTS = [
 const I18N = {
   ua: {
     "nav.home": "На головну",
-    "nav.about": "Про мене",
+    "nav.about": "Про Hugo",
     "nav.platform": "Платформа",
-    "cta.write": "Домовитись про консультацію",
-    "cta.consult": "Домовитись про консультацію",
-    "cta.consultSub": "Бізнес · легалізація · реклама · медійний розвиток",
+    "cta.write": "Обговорити співпрацю",
+    "cta.consult": "Обговорити співпрацю",
+    "cta.consultSub": "Медійна присутність · інтеграції · партнерства",
     "about.title": "Hugo",
-    "about.intro1": "Я — Hugo, засновник Hugo Media Group.",
-    "platform.p2": "100 000+ людей в аудиторії, 6 000 000+ переглядів щомісяця, 1 000+ контактів, 100+ рекламних інтеграцій, консультацій, партнерств і перевірених робочих рішень."
+    "about.intro1": "Я Сергій, автор Hugo Media Group.",
+    "platform.p2": "Hugo Media Group — авторська медіаплатформа про людей, бізнес і життя за кордоном."
   },
   en: {
     "nav.home": "Home",
     "nav.about": "About Hugo",
     "nav.platform": "Platform",
-    "cta.write": "Book a consultation",
-    "cta.consult": "Book a consultation",
-    "cta.consultSub": "Business · legalization · advertising · media growth",
+    "cta.write": "Discuss cooperation",
+    "cta.consult": "Discuss cooperation",
+    "cta.consultSub": "Media presence · integrations · partnerships",
     "about.title": "Hugo",
-    "about.intro1": "I am Hugo, founder of Hugo Media Group.",
-    "platform.p2": "100,000+ people in the audience, 6,000,000+ monthly views, 1,000+ contacts, 100+ advertising integrations, consultations, partnerships and proven working solutions."
+    "about.intro1": "I am Serhii, author of Hugo Media Group.",
+    "platform.p2": "Hugo Media Group is an author-led media platform about people, business and life abroad."
   },
   pl: {
     "nav.home": "Strona główna",
     "nav.about": "O Hugo",
     "nav.platform": "Platforma",
-    "cta.write": "Umówić konsultację",
-    "cta.consult": "Umówić konsultację",
-    "cta.consultSub": "Biznes · legalizacja · reklama · rozwój medialny",
+    "cta.write": "Omówić współpracę",
+    "cta.consult": "Omówić współpracę",
+    "cta.consultSub": "Obecność medialna · integracje · partnerstwa",
     "about.title": "Hugo",
-    "about.intro1": "Jestem Hugo, założycielem Hugo Media Group.",
-    "platform.p2": "100 000+ osób w publiczności, 6 000 000+ wyświetleń miesięcznie, 1 000+ kontaktów, 100+ integracji reklamowych, konsultacji, partnerstw i sprawdzonych rozwiązań roboczych."
+    "about.intro1": "Jestem Serhii, autorem Hugo Media Group.",
+    "platform.p2": "Hugo Media Group to autorska platforma medialna o ludziach, biznesie i życiu za granicą."
   }
 };
 
 const PAGE_TITLES = {
   ua: {
-    about: "Про Hugo — журналіст, підприємець, засновник Hugo Media Group",
+    about: "Про Hugo — автор Hugo Media Group",
     consultation: "Консультація з Hugo — Hugo Media Group",
     platform: "Hugo Media Group — медійна платформа для українців у Польщі",
     media: "Медіа-платформа — Hugo Media Group",
     legalization: "Легалізація в Польщі — Hugo Media Group × Axis Legalisation",
-    business: "Реклама для бізнесу — Hugo Media Group",
+    business: "Для бізнесу — медійна присутність через Hugo Media Group",
     partners: "Співпраця — Hugo Media Group",
-    "media-kit": "Медіакіт Hugo Media Group — реклама, аудиторія та інтеграції"
+    "media-kit": "Медіакіт Hugo Media Group — формати, аудиторія та пакети"
   },
   en: {
-    about: "About Hugo — journalist, entrepreneur, founder of Hugo Media Group",
+    about: "About Hugo — author of Hugo Media Group",
     consultation: "Consultation with Hugo — Hugo Media Group",
     platform: "Hugo Media Group — media platform for Ukrainians in Poland",
     media: "Media platform — Hugo Media Group",
     legalization: "Legalization in Poland — Hugo Media Group × Axis Legalisation",
-    business: "Business advertising — Hugo Media Group",
+    business: "For business — media presence through Hugo Media Group",
     partners: "Cooperation — Hugo Media Group",
-    "media-kit": "Hugo Media Group media kit — advertising, audience and integrations"
+    "media-kit": "Hugo Media Group media kit — formats, audience and packages"
   },
   pl: {
-    about: "O Hugo — dziennikarz, przedsiębiorca, założyciel Hugo Media Group",
+    about: "O Hugo — autor Hugo Media Group",
     consultation: "Konsultacja z Hugo — Hugo Media Group",
     platform: "Hugo Media Group — platforma medialna dla Ukraińców w Polsce",
     media: "Platforma medialna — Hugo Media Group",
     legalization: "Legalizacja w Polsce — Hugo Media Group × Axis Legalisation",
-    business: "Reklama dla biznesu — Hugo Media Group",
+    business: "Dla biznesu — obecność medialna przez Hugo Media Group",
     partners: "Współpraca — Hugo Media Group",
-    "media-kit": "Mediakit Hugo Media Group — reklama, publiczność i integracje"
+    "media-kit": "Mediakit Hugo Media Group — formaty, publiczność i pakiety"
   }
 };
 
@@ -148,10 +157,10 @@ function applyPageCtas() {
   const page = document.body.dataset.page || "home";
 
   if (page === "home") {
-    setInternalLink(document.querySelector(".action-list .action-card.action-primary"), "consultation.html", "Домовитись про консультацію");
-    const aboutLink = document.querySelector('.action-list a[href="about.html"] strong');
+    setExternalLink(document.querySelector(".action-list .action-card.action-primary"), HUGO_LINKS.telegram, "Обговорити співпрацю");
+    const aboutLink = document.querySelector('.service-stack a[href="about.html"] strong');
     if (aboutLink) aboutLink.textContent = "Про Hugo";
-    const platformLink = document.querySelector('.action-list a[href="platform.html"] strong');
+    const platformLink = document.querySelector('.service-stack a[href="platform.html"] strong');
     if (platformLink) platformLink.textContent = "Про Hugo Media Group";
     return;
   }
@@ -161,22 +170,17 @@ function applyPageCtas() {
   if (page === "legalization") return;
 
   if (page === "platform") {
-    setExternalLink(document.querySelector(".platform-value-cta"), HUGO_LINKS.consultation, "Стати партнером Hugo Media Group");
-    setExternalLink(document.querySelector(".editorial-page-actions .action-card.action-primary"), HUGO_LINKS.consultation, "Домовитись про консультацію");
+    setExternalLink(document.querySelector(".platform-value-cta"), HUGO_LINKS.telegram, "Стати партнером Hugo Media Group");
+    setExternalLink(document.querySelector(".editorial-page-actions .action-card.action-primary"), HUGO_LINKS.telegram, "Обговорити співпрацю");
     return;
   }
 
   if (page === "business") {
     const mainCta = document.querySelector(".platform-unites .platform-value-cta");
-    setExternalLink(mainCta, HUGO_LINKS.consultation, "Обговорити рекламу");
+    setExternalLink(mainCta, HUGO_LINKS.telegram, "Обговорити співпрацю");
     const mediaKitCta = document.querySelector("[data-business-mediakit]");
     if (mediaKitCta) {
-      setInternalLink(mediaKitCta, "media-kit.html", "Отримати медіакіт");
-    } else if (mainCta) {
-      const clone = mainCta.cloneNode(true);
-      clone.dataset.businessMediakit = "true";
-      setInternalLink(clone, "media-kit.html", "Отримати медіакіт");
-      mainCta.insertAdjacentElement("afterend", clone);
+      setExternalLink(mediaKitCta, HUGO_LINKS.telegram, "Отримати комерційну пропозицію");
     }
     return;
   }
@@ -184,12 +188,12 @@ function applyPageCtas() {
   const pageCtas = {
     media: "Запропонувати тему або інтеграцію",
     partners: "Запропонувати співпрацю",
-    "media-kit": "Отримати умови реклами"
+    "media-kit": "Обговорити співпрацю"
   };
   const text = pageCtas[page];
   if (text) {
-    setExternalLink(document.querySelector(".editorial-page-actions .action-card.action-primary"), HUGO_LINKS.consultation, text);
-    setExternalLink(document.querySelector(".platform-unites .platform-value-cta"), HUGO_LINKS.consultation, text);
+    setExternalLink(document.querySelector(".editorial-page-actions .action-card.action-primary"), HUGO_LINKS.telegram, text);
+    setExternalLink(document.querySelector(".platform-unites .platform-value-cta"), HUGO_LINKS.telegram, text);
   }
 }
 
